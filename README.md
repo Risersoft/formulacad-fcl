@@ -78,13 +78,14 @@ endpart
 child name=Column key="EN.IPE200"
     span=3000
     .translate = ($plate_len / 2, $plate_wid / 2, $plate_thk)
-````
+```
 
-Three properties shape the language:
+FCL is designed to be simple, predictable, and reusable:
 
-* **Declarative.** No loops, no conditionals, no variable mutation, no side effects.
-* **Deterministic.** The same FCL always produces the same geometry.
-* **Component-oriented.** Reuse happens by reference using `child` rules.
+- You define the model explicitly in text, with all parameters and relationships visible in one place
+- Patterns and variation are expressed using `qty`, `$index`, and functions like `@If`, `@Choose`
+- The same FCL always produces the same geometry
+- Components are reused by reference using `child` rules
 
 ---
 
