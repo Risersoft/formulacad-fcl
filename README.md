@@ -23,7 +23,6 @@ Models defined here are executed and rendered by the FormulaCAD platform. The pl
     /EN/              # European Standard steel sections (796 components)
         /index.json
         /FCL/
-        /Images/
     /AISC/            # US AISC steel sections (2,299 components)
         /index.json
         /FCL/
