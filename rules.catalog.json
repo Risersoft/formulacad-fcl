@@ -1,0 +1,5180 @@
+{
+  "Rules": [
+    {
+      "ShortKey": "align2d",
+      "Display": "Transform \u003E  Align",
+      "Group": "geom3d",
+      "Variants": [
+        {
+          "RuleSubType": "align2d",
+          "Params": [
+            {
+              "Key": "dist",
+              "Type": "number",
+              "Required": true,
+              "Display": "dist"
+            },
+            {
+              "Key": "ent1",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent1"
+            },
+            {
+              "Key": "ent2",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent2"
+            },
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "part2",
+              "Type": "string",
+              "Required": true,
+              "Display": "part2"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "align3d",
+      "Display": "Transform \u003E Align",
+      "Group": "geom3d",
+      "Variants": [
+        {
+          "RuleSubType": "align3d",
+          "Params": [
+            {
+              "Key": "dist",
+              "Type": "number",
+              "Required": true,
+              "Display": "dist"
+            },
+            {
+              "Key": "ent1",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent1"
+            },
+            {
+              "Key": "ent2",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent2"
+            },
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "part2",
+              "Type": "string",
+              "Required": true,
+              "Display": "part2"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "angle",
+      "Display": "Constraint \u003E Angle",
+      "Group": "constraint3d",
+      "Variants": [
+        {
+          "RuleSubType": "angle",
+          "Params": [
+            {
+              "Key": "dist",
+              "Type": "number",
+              "Required": true,
+              "Display": "dist"
+            },
+            {
+              "Key": "ent1",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent1"
+            },
+            {
+              "Key": "ent2",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent2"
+            },
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "part2",
+              "Type": "string",
+              "Required": true,
+              "Display": "part2"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "angledim",
+      "Display": "Dimension \u003EAngular \u003ELine1, Line2, ArcPoint",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "Mode": "2l",
+          "RuleSubType": "Angledim-2l",
+          "Params": [
+            {
+              "Key": "ent1",
+              "Aliases": [
+                "e1"
+              ],
+              "Type": "ref",
+              "Required": true
+            },
+            {
+              "Key": "ent2",
+              "Aliases": [
+                "e2"
+              ],
+              "Type": "ref",
+              "Required": true
+            },
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "text",
+              "Type": "string",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "c2p",
+          "RuleSubType": "Angledim-c2p",
+          "Params": [
+            {
+              "Key": "centre",
+              "Aliases": [
+                "c"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "point2",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "pointplace",
+              "Type": "point",
+              "Required": true,
+              "Display": "Point to place on"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "arc",
+      "Display": "Arc \u003E 2 Points \u002B Angle",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "Mode": "2pang",
+          "RuleSubType": "Arc-2pang",
+          "Params": [
+            {
+              "Key": "angle",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "normal",
+              "Type": "vector",
+              "Required": false,
+              "Display": "Normal"
+            },
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "point2",
+              "Aliases": [
+                "p2"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "2pc",
+          "RuleSubType": "Arc-2pc",
+          "Params": [
+            {
+              "Key": "centre",
+              "Aliases": [
+                "c"
+              ],
+              "Type": "point",
+              "Required": true,
+              "Display": "Centre"
+            },
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "point2",
+              "Aliases": [
+                "p2"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "2pper",
+          "RuleSubType": "Arc-2pper",
+          "Params": [
+            {
+              "Key": "normal",
+              "Type": "vector",
+              "Required": false,
+              "Display": "Normal"
+            },
+            {
+              "Key": "perpento",
+              "Type": "ref",
+              "Required": true
+            },
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "point2",
+              "Aliases": [
+                "p2"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "2pr",
+          "RuleSubType": "Arc-2pr",
+          "Params": [
+            {
+              "Key": "normal",
+              "Type": "vector",
+              "Required": false,
+              "Display": "Normal"
+            },
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "point2",
+              "Aliases": [
+                "p2"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "radius",
+              "Aliases": [
+                "r"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Radius"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "2ptan",
+          "RuleSubType": "Arc-2ptan",
+          "Params": [
+            {
+              "Key": "normal",
+              "Type": "vector",
+              "Required": false,
+              "Display": "Normal"
+            },
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "point2",
+              "Aliases": [
+                "p2"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "tancurve1",
+              "Aliases": [
+                "tan1"
+              ],
+              "Type": "ref",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "3p",
+          "RuleSubType": "Arc-3p",
+          "Params": [
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "point2",
+              "Aliases": [
+                "p2"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "point3",
+              "Aliases": [
+                "p3"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "pcang",
+          "RuleSubType": "Arc-pcang",
+          "Params": [
+            {
+              "Key": "angle",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "centre",
+              "Aliases": [
+                "c"
+              ],
+              "Type": "point",
+              "Required": true,
+              "Display": "Centre"
+            },
+            {
+              "Key": "normal",
+              "Type": "vector",
+              "Required": false,
+              "Display": "Normal"
+            },
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "pclen",
+          "RuleSubType": "Arc-pclen",
+          "Params": [
+            {
+              "Key": "centre",
+              "Aliases": [
+                "c"
+              ],
+              "Type": "point",
+              "Required": true,
+              "Display": "Centre"
+            },
+            {
+              "Key": "length",
+              "Aliases": [
+                "l"
+              ],
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "normal",
+              "Type": "vector",
+              "Required": false,
+              "Display": "Normal"
+            },
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "ttr",
+          "RuleSubType": "Arc-ttr",
+          "Params": [
+            {
+              "Key": "normal",
+              "Type": "vector",
+              "Required": false,
+              "Display": "Normal"
+            },
+            {
+              "Key": "onright1",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "onright2",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "onright3",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "radius",
+              "Aliases": [
+                "r"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Radius"
+            },
+            {
+              "Key": "tancurve1",
+              "Type": "ref",
+              "Required": true
+            },
+            {
+              "Key": "tancurve2",
+              "Type": "ref",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "arraypolar2d",
+      "Display": "Operation \u003E Polar Array",
+      "Group": "container",
+      "Variants": [
+        {
+          "RuleSubType": "arraypolar2d",
+          "Params": [
+            {
+              "Key": "ent1",
+              "Aliases": [
+                "e1"
+              ],
+              "Type": "ref",
+              "Required": true,
+              "Display": "Entity"
+            },
+            {
+              "Key": "numCopies",
+              "Type": "number",
+              "Required": true,
+              "Display": "No. of Copies"
+            },
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true,
+              "Display": "Base Point"
+            },
+            {
+              "Key": "rotate",
+              "Type": "boolean",
+              "Required": true
+            },
+            {
+              "Key": "TotAng",
+              "Type": "number",
+              "Required": true,
+              "Display": "Total Angle in Degrees"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "arrayrect2d",
+      "Display": "Operation \u003E Rectangular Array",
+      "Group": "container",
+      "Variants": [
+        {
+          "RuleSubType": "arrayrect2d",
+          "Params": [
+            {
+              "Key": "colOffset",
+              "Type": "number",
+              "Required": true,
+              "Display": "Offset for Column"
+            },
+            {
+              "Key": "ent1",
+              "Aliases": [
+                "e1"
+              ],
+              "Type": "ref",
+              "Required": true,
+              "Display": "Entity"
+            },
+            {
+              "Key": "NumCols",
+              "Type": "number",
+              "Required": true,
+              "Display": "No. of Columns"
+            },
+            {
+              "Key": "numrows",
+              "Type": "number",
+              "Required": true,
+              "Display": "No. of Rows"
+            },
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true,
+              "Display": "Base Point"
+            },
+            {
+              "Key": "rowOffset",
+              "Type": "number",
+              "Required": true,
+              "Display": "Offset for Row"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "assy",
+      "Display": "Assembly",
+      "Group": "container",
+      "Variants": [
+        {
+          "RuleSubType": "assy",
+          "Params": [
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            },
+            {
+              "Key": "newdef",
+              "Type": "bool",
+              "Required": false,
+              "Display": "New Definition?",
+              "Notes": "Optional; Whether each instance is treated as new definition"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "baseview",
+      "Display": "Base View",
+      "Group": "paper3d",
+      "Variants": [
+        {
+          "RuleSubType": "baseview",
+          "Params": [
+            {
+              "Key": "Orientation",
+              "Type": "ref",
+              "Required": true,
+              "Display": "Orientation"
+            },
+            {
+              "Key": "scale",
+              "Type": "number",
+              "Required": true,
+              "Display": "Scale"
+            },
+            {
+              "Key": "sheet",
+              "Type": "string",
+              "Required": true,
+              "Display": "Sheet Name"
+            },
+            {
+              "Key": "Style",
+              "Type": "string",
+              "Required": true,
+              "Display": "Style"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "bom",
+      "Display": "BOM",
+      "Group": "system",
+      "Variants": [
+        {
+          "RuleSubType": "bom",
+          "Params": [
+            {
+              "Key": "aggcode",
+              "Aliases": [
+                "agg"
+              ],
+              "Type": "string",
+              "Required": false,
+              "Display": "Aggregate Code",
+              "Notes": "Aggregation code for BOM rollups"
+            },
+            {
+              "Key": "aggtext",
+              "Aliases": [
+                "aggdesc"
+              ],
+              "Type": "string",
+              "Required": false,
+              "Display": "Aggregate Text",
+              "Notes": "Aggregation display text"
+            },
+            {
+              "Key": "density",
+              "Aliases": [
+                "rho"
+              ],
+              "Type": "number",
+              "Required": false,
+              "Display": "Density",
+              "Notes": "Density for weight calculations"
+            },
+            {
+              "Key": "descrip",
+              "Aliases": [
+                "desc",
+                "description"
+              ],
+              "Type": "string",
+              "Required": false,
+              "Display": "Description",
+              "Notes": "BOM description"
+            },
+            {
+              "Key": "drg",
+              "Aliases": [
+                "drawing"
+              ],
+              "Type": "string",
+              "Required": false,
+              "Display": "Drawing",
+              "Notes": "Drawing reference"
+            },
+            {
+              "Key": "groupnum",
+              "Aliases": [
+                "group",
+                "grp"
+              ],
+              "Type": "number",
+              "Required": false,
+              "Display": "Group Number",
+              "Notes": "Grouping identifier for BOM"
+            },
+            {
+              "Key": "length",
+              "Aliases": [
+                "len"
+              ],
+              "Type": "number",
+              "Required": false,
+              "Display": "Length",
+              "Notes": "Length for BOM"
+            },
+            {
+              "Key": "material",
+              "Aliases": [
+                "mat"
+              ],
+              "Type": "string",
+              "Required": false,
+              "Display": "Material",
+              "Notes": "Material name or code"
+            },
+            {
+              "Key": "portionnum",
+              "Aliases": [
+                "portion"
+              ],
+              "Type": "number",
+              "Required": false,
+              "Display": "Portion Number",
+              "Notes": "Portion identifier"
+            },
+            {
+              "Key": "qtytext",
+              "Aliases": [],
+              "Type": "string",
+              "Required": false,
+              "Display": "Quantity Text",
+              "Notes": "Quantity display text"
+            },
+            {
+              "Key": "remark",
+              "Aliases": [
+                "rmk"
+              ],
+              "Type": "string",
+              "Required": false,
+              "Display": "Remark",
+              "Notes": "Remark"
+            },
+            {
+              "Key": "thk",
+              "Aliases": [
+                "thickness"
+              ],
+              "Type": "number",
+              "Required": false,
+              "Display": "Thickness",
+              "Notes": "Thickness for BOM"
+            },
+            {
+              "Key": "width",
+              "Aliases": [
+                "wid"
+              ],
+              "Type": "number",
+              "Required": false,
+              "Display": "Width",
+              "Notes": "Width for BOM"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "box",
+      "Display": "CSG \u003E Box",
+      "Group": "Entity3d",
+      "Variants": [
+        {
+          "RuleSubType": "box",
+          "Params": [
+            {
+              "Key": "height",
+              "Aliases": [
+                "h"
+              ],
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "length",
+              "Aliases": [
+                "l"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Length"
+            },
+            {
+              "Key": "width",
+              "Aliases": [
+                "w"
+              ],
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "child",
+      "Display": "Child",
+      "Group": "container",
+      "Variants": [
+        {
+          "RuleSubType": "child",
+          "Params": [
+            {
+              "Key": "key",
+              "Type": "string",
+              "Required": true,
+              "Display": "Key"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "circle",
+      "Display": "Circle \u003E2 Points",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "Mode": "2p",
+          "RuleSubType": "Circle-2p",
+          "Params": [
+            {
+              "Key": "normal",
+              "Type": "vector",
+              "Required": false,
+              "Display": "Normal"
+            },
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "point2",
+              "Aliases": [
+                "p2"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "2pr",
+          "RuleSubType": "Circle-2pr",
+          "Params": [
+            {
+              "Key": "normal",
+              "Type": "vector",
+              "Required": false,
+              "Display": "Normal"
+            },
+            {
+              "Key": "onright1",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "point1",
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "point2",
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "radius",
+              "Aliases": [
+                "r"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Radius"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "3p",
+          "RuleSubType": "Circle-3p",
+          "Params": [
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "point2",
+              "Aliases": [
+                "p2"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "point3",
+              "Aliases": [
+                "p3"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "cr",
+          "RuleSubType": "Circle-cr",
+          "Params": [
+            {
+              "Key": "centre",
+              "Aliases": [
+                "c"
+              ],
+              "Type": "point",
+              "Required": true,
+              "Display": "Centre"
+            },
+            {
+              "Key": "normal",
+              "Type": "vector",
+              "Required": false,
+              "Display": "Normal"
+            },
+            {
+              "Key": "radius",
+              "Aliases": [
+                "r"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Radius"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "ct",
+          "RuleSubType": "Circle-ct",
+          "Params": [
+            {
+              "Key": "centre",
+              "Aliases": [
+                "c"
+              ],
+              "Type": "point",
+              "Required": true,
+              "Display": "Centre"
+            },
+            {
+              "Key": "normal",
+              "Type": "vector",
+              "Required": false,
+              "Display": "Normal"
+            },
+            {
+              "Key": "onright1",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "tancurve1",
+              "Type": "ref",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "ptr",
+          "RuleSubType": "Circle-ptr",
+          "Params": [
+            {
+              "Key": "normal",
+              "Type": "vector",
+              "Required": false,
+              "Display": "Normal"
+            },
+            {
+              "Key": "onright1",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "radius",
+              "Aliases": [
+                "r"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Radius"
+            },
+            {
+              "Key": "tancurve1",
+              "Type": "ref",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "ttr",
+          "RuleSubType": "Circle-ttr",
+          "Params": [
+            {
+              "Key": "normal",
+              "Type": "vector",
+              "Required": false,
+              "Display": "Normal"
+            },
+            {
+              "Key": "onright1",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "onright2",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "onright3",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "radius",
+              "Aliases": [
+                "r"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Radius"
+            },
+            {
+              "Key": "tancurve1",
+              "Type": "ref",
+              "Required": true
+            },
+            {
+              "Key": "tancurve2",
+              "Type": "ref",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "ttt",
+          "RuleSubType": "Circle-ttt",
+          "Params": [
+            {
+              "Key": "normal",
+              "Type": "vector",
+              "Required": false,
+              "Display": "Normal"
+            },
+            {
+              "Key": "onright1",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "onright2",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "onright3",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "tancurve1",
+              "Type": "ref",
+              "Required": true
+            },
+            {
+              "Key": "tancurve2",
+              "Type": "ref",
+              "Required": true
+            },
+            {
+              "Key": "tancurve3",
+              "Type": "ref",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "cone",
+      "Display": "CSG \u003E Cone",
+      "Group": "Entity3d",
+      "Variants": [
+        {
+          "RuleSubType": "cone",
+          "Params": [
+            {
+              "Key": "height",
+              "Aliases": [
+                "h"
+              ],
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "radius",
+              "Aliases": [
+                "r"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Base Raduis"
+            },
+            {
+              "Key": "topradius",
+              "Aliases": [
+                "tr"
+              ],
+              "Type": "number",
+              "Required": false,
+              "Display": "Top Radius"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "curve",
+      "Display": "Curve",
+      "Group": "container",
+      "Variants": [
+        {
+          "RuleSubType": "curve",
+          "Params": [
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "custom2d",
+      "Display": "Operation \u003ECustom",
+      "Group": "container",
+      "Variants": [
+        {
+          "RuleSubType": "customblock2d",
+          "Params": [
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "cylinder",
+      "Display": "CSG \u003E Cylinder",
+      "Group": "Entity3d",
+      "Variants": [
+        {
+          "RuleSubType": "cylinder",
+          "Params": [
+            {
+              "Key": "height",
+              "Aliases": [
+                "h"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Height"
+            },
+            {
+              "Key": "radius",
+              "Aliases": [
+                "r"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Radius"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "diadim",
+      "Display": "Dimension \u003EDiametric",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "RuleSubType": "diadim",
+          "Params": [
+            {
+              "Key": "ent1",
+              "Aliases": [
+                "e1"
+              ],
+              "Type": "ref",
+              "Required": true
+            },
+            {
+              "Key": "pointplace",
+              "Type": "point",
+              "Required": true,
+              "Display": "Point to place on"
+            },
+            {
+              "Key": "text",
+              "Type": "string",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "doc",
+      "Display": "Document",
+      "Group": "container",
+      "Variants": [
+        {
+          "RuleSubType": "doc",
+          "Params": [
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "doctext",
+      "Display": "Document Text",
+      "Group": "doc3d",
+      "Variants": [
+        {
+          "RuleSubType": "DocText",
+          "Params": [
+            {
+              "Key": "text",
+              "Type": "string",
+              "Required": true,
+              "Display": "Text"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "ellipse",
+      "Display": "Curve \u003E Ellipse",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "RuleSubType": "ellipse",
+          "Params": [
+            {
+              "Key": "centre",
+              "Aliases": [
+                "c"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "majorradius",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "minorradius",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "normal",
+              "Type": "vector",
+              "Required": false,
+              "Display": "Normal"
+            },
+            {
+              "Key": "rotang",
+              "Type": "number",
+              "Required": true,
+              "Display": "Rotation Angle"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "eqpipe",
+      "Display": "Constraint \u003E  Pipe",
+      "Group": "constraint3d",
+      "Variants": [
+        {
+          "RuleSubType": "eqpipe",
+          "Params": [
+            {
+              "Key": "dist",
+              "Type": "number",
+              "Required": true,
+              "Display": "dist"
+            },
+            {
+              "Key": "ent1",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent1"
+            },
+            {
+              "Key": "ent2",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent2"
+            },
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "part2",
+              "Type": "string",
+              "Required": true,
+              "Display": "part2"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "extrude",
+      "Display": "Operation \u003EExtrude",
+      "Group": "Entity3d",
+      "Variants": [
+        {
+          "Mode": "Add",
+          "RuleSubType": "Extrude-Add",
+          "Params": [
+            {
+              "Key": "distance",
+              "Type": "number",
+              "Required": true,
+              "Display": "Distance"
+            },
+            {
+              "Key": "profile",
+              "Type": "ref",
+              "Required": true,
+              "Display": "Profile"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "cut",
+          "RuleSubType": "Extrude-cut",
+          "Params": [
+            {
+              "Key": "distance",
+              "Type": "number",
+              "Required": true,
+              "Display": "Distance"
+            },
+            {
+              "Key": "profile",
+              "Type": "ref",
+              "Required": true,
+              "Display": "Profile"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "new",
+          "RuleSubType": "Extrude-New",
+          "Params": [
+            {
+              "Key": "distance",
+              "Type": "number",
+              "Required": true,
+              "Display": "Distance"
+            },
+            {
+              "Key": "profile",
+              "Type": "ref",
+              "Required": true,
+              "Display": "Profile"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "filepicture",
+      "Display": "File Picture",
+      "Group": "doc3d",
+      "Variants": [
+        {
+          "RuleSubType": "FilePicture",
+          "Params": [
+            {
+              "Key": "filename",
+              "Type": "string",
+              "Required": true,
+              "Display": "File Name"
+            },
+            {
+              "Key": "Height",
+              "Aliases": [
+                "h"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Height"
+            },
+            {
+              "Key": "Width",
+              "Aliases": [
+                "w"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Width"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "fillet",
+      "Display": "Operation \u003E Fillet",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "RuleSubType": "fillet",
+          "Params": [
+            {
+              "Key": "curve1",
+              "Type": "ref",
+              "Required": true
+            },
+            {
+              "Key": "curve2",
+              "Type": "ref",
+              "Required": true
+            },
+            {
+              "Key": "radius",
+              "Aliases": [
+                "r"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Radius"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "flush",
+      "Display": "Constraint \u003E Flush",
+      "Group": "constraint3d",
+      "Variants": [
+        {
+          "RuleSubType": "flush",
+          "Params": [
+            {
+              "Key": "dist",
+              "Type": "number",
+              "Required": true,
+              "Display": "dist"
+            },
+            {
+              "Key": "ent1",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent1"
+            },
+            {
+              "Key": "ent2",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent2"
+            },
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "part2",
+              "Type": "string",
+              "Required": true,
+              "Display": "part2"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "hatch",
+      "Display": "Operation \u003E Hatch",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "RuleSubType": "hatch",
+          "Params": [
+            {
+              "Key": "curvelist",
+              "Type": "list",
+              "Required": true
+            },
+            {
+              "Key": "Gradient",
+              "Type": "ref",
+              "Required": true
+            },
+            {
+              "Key": "pattern",
+              "Type": "string",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "helix",
+      "Display": "Paths \u003EHelix",
+      "Group": "entity3d",
+      "Variants": [
+        {
+          "RuleSubType": "helix",
+          "Params": [
+            {
+              "Key": "handed",
+              "Aliases": [
+                "hand"
+              ],
+              "Type": "string",
+              "Required": false,
+              "Enums": [
+                "left",
+                "right"
+              ],
+              "Display": "Handed"
+            },
+            {
+              "Key": "height",
+              "Aliases": [
+                "h"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Height"
+            },
+            {
+              "Key": "radius",
+              "Aliases": [
+                "r"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Radius"
+            },
+            {
+              "Key": "turns",
+              "Aliases": [
+                "t"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Turns"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "insaln",
+      "Display": "Constraint \u003E  Insert Align",
+      "Group": "constraint3d",
+      "Variants": [
+        {
+          "RuleSubType": "insaln",
+          "Params": [
+            {
+              "Key": "dist",
+              "Type": "number",
+              "Required": true,
+              "Display": "dist"
+            },
+            {
+              "Key": "ent1",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent1"
+            },
+            {
+              "Key": "ent2",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent2"
+            },
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "part2",
+              "Type": "string",
+              "Required": true,
+              "Display": "part2"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "insopp",
+      "Display": "Constraint \u003E Insert Opp",
+      "Group": "constraint3d",
+      "Variants": [
+        {
+          "RuleSubType": "insopp",
+          "Params": [
+            {
+              "Key": "dist",
+              "Type": "number",
+              "Required": true,
+              "Display": "dist"
+            },
+            {
+              "Key": "ent1",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent1"
+            },
+            {
+              "Key": "ent2",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent2"
+            },
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "part2",
+              "Type": "string",
+              "Required": true,
+              "Display": "part2"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "intersect",
+      "Display": "Boolean \u003EIntersect",
+      "Group": "boolean3d",
+      "Variants": [
+        {
+          "RuleSubType": "intersect",
+          "Params": [
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "part2",
+              "Type": "string",
+              "Required": true,
+              "Display": "part2"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "ipart",
+      "Display": "Constraint \u003E  I-Part",
+      "Group": "constraint3d",
+      "Variants": [
+        {
+          "RuleSubType": "ipart",
+          "Params": [
+            {
+              "Key": "dist",
+              "Type": "number",
+              "Required": true,
+              "Display": "dist"
+            },
+            {
+              "Key": "ent1",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent1"
+            },
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "leader",
+      "Display": "Annotation \u003E Leader",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "RuleSubType": "leader",
+          "Params": [
+            {
+              "Key": "hasarrow",
+              "Type": "boolean",
+              "Required": true
+            },
+            {
+              "Key": "plist",
+              "Type": "list",
+              "Required": true,
+              "Display": "Point List"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "line",
+      "Display": "Line \u003E 2 Point",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "Mode": "2p",
+          "RuleSubType": "Line-2p",
+          "Params": [
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true,
+              "Display": "Point1"
+            },
+            {
+              "Key": "point2",
+              "Aliases": [
+                "p2"
+              ],
+              "Type": "point",
+              "Required": true,
+              "Display": "Point 2"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "2t",
+          "RuleSubType": "Line-2t",
+          "Params": [
+            {
+              "Key": "onright1",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "onright2",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "tancurve1",
+              "Type": "ref",
+              "Required": true,
+              "Display": "Tangent Curve 1"
+            },
+            {
+              "Key": "tancurve2",
+              "Type": "ref",
+              "Required": true,
+              "Display": "Tangent Curve 2"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "pper",
+          "RuleSubType": "Line-pper",
+          "Params": [
+            {
+              "Key": "perpenTo",
+              "Type": "ref",
+              "Required": true,
+              "Display": "Perpendicular To Entity"
+            },
+            {
+              "Key": "point1",
+              "Type": "point",
+              "Required": true,
+              "Display": "Point1"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "pt",
+          "RuleSubType": "Line-pt",
+          "Params": [
+            {
+              "Key": "onright1",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true,
+              "Display": "Point1"
+            },
+            {
+              "Key": "tancurve1",
+              "Type": "ref",
+              "Required": true,
+              "Display": "Tangent Curve 1"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "tper",
+          "RuleSubType": "Line-tper",
+          "Params": [
+            {
+              "Key": "onright1",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "perpenTo",
+              "Type": "ref",
+              "Required": true,
+              "Display": "Perpendicular To Entity"
+            },
+            {
+              "Key": "tancurve1",
+              "Type": "ref",
+              "Required": true,
+              "Display": "Tangent Curve 1"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "lineardim",
+      "Display": "Dimension \u003ELinear",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "RuleSubType": "lineardim",
+          "Params": [
+            {
+              "Key": "dimtype",
+              "Type": "string",
+              "Required": true,
+              "Display": "Dimension Type"
+            },
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "point2",
+              "Aliases": [
+                "p2"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "pointplace",
+              "Type": "point",
+              "Required": true,
+              "Display": "Point to place on"
+            },
+            {
+              "Key": "text",
+              "Type": "string",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "loft",
+      "Display": "Operation \u003ELoft",
+      "Group": "entity3d",
+      "Variants": [
+        {
+          "RuleSubType": "loft",
+          "Params": [
+            {
+              "Key": "sections",
+              "Aliases": [
+                "s"
+              ],
+              "Type": "list",
+              "Required": true,
+              "Display": "Sections"
+            },
+            {
+              "Key": "solid",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "Solid?"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "mate",
+      "Display": "Constraint \u003E Mate",
+      "Group": "constraint3d",
+      "Variants": [
+        {
+          "RuleSubType": "mate",
+          "Params": [
+            {
+              "Key": "dist",
+              "Type": "number",
+              "Required": true,
+              "Display": "dist"
+            },
+            {
+              "Key": "ent1",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent1"
+            },
+            {
+              "Key": "ent2",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent2"
+            },
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "part2",
+              "Type": "string",
+              "Required": true,
+              "Display": "part2"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "mirror",
+      "Display": "Transform \u003EMirror",
+      "Group": "action2d",
+      "Variants": [
+        {
+          "RuleSubType": "mirror",
+          "Params": [
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "mirror3d",
+      "Display": "Transform \u003E Mirror",
+      "Group": "action3d",
+      "Variants": [
+        {
+          "RuleSubType": "mirror3d",
+          "Params": [
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": true,
+              "Display": "name"
+            },
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "pl1",
+              "Type": "plane",
+              "Required": true,
+              "Display": "pl1"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "mirrorcopy",
+      "Display": "Operation \u003E Mirror Copy",
+      "Group": "entity2d",
+      "Variants": [
+        {
+          "RuleSubType": "mirrorcopy",
+          "Params": [
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "mirrorcopy3d",
+      "Display": "Operation \u003E Mirror Copy",
+      "Group": "entity3d",
+      "Variants": [
+        {
+          "RuleSubType": "mirrorcopy3d",
+          "Params": [
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": true,
+              "Display": "name"
+            },
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "pl1",
+              "Type": "plane",
+              "Required": true,
+              "Display": "pl1"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "modelpicture",
+      "Display": "Model Picture",
+      "Group": "doc3d",
+      "Variants": [
+        {
+          "RuleSubType": "ModelPicture",
+          "Params": [
+            {
+              "Key": "Height",
+              "Type": "number",
+              "Required": true,
+              "Display": "Height"
+            },
+            {
+              "Key": "orientation",
+              "Type": "ref",
+              "Required": true,
+              "Display": "View Orientation"
+            },
+            {
+              "Key": "Width",
+              "Aliases": [
+                "w"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Width"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "move",
+      "Display": "Transform \u003EMove",
+      "Group": "action2d",
+      "Variants": [
+        {
+          "RuleSubType": "move",
+          "Params": [
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "move3d",
+      "Display": "Transform \u003E  Move",
+      "Group": "action3d",
+      "Variants": [
+        {
+          "RuleSubType": "move3d",
+          "Params": [
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "vec1",
+              "Type": "vector",
+              "Required": true,
+              "Display": "vec1"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "moveall",
+      "Display": "Transform \u003EMoveall",
+      "Group": "action2d",
+      "Variants": [
+        {
+          "RuleSubType": "moveall",
+          "Params": [
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "mtext",
+      "Display": "Annotation \u003E MultiLine Text",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "RuleSubType": "mtext",
+          "Params": [
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "text",
+              "Type": "string",
+              "Required": true
+            },
+            {
+              "Key": "textht",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "width",
+              "Aliases": [
+                "w"
+              ],
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "offsetcurve",
+      "Display": "Operation \u003E Offset",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "RuleSubType": "offsetcurve",
+          "Params": [
+            {
+              "Key": "ent1",
+              "Aliases": [
+                "e1"
+              ],
+              "Type": "ref",
+              "Required": true,
+              "Display": "Entity to Offset"
+            },
+            {
+              "Key": "offset",
+              "Type": "number",
+              "Required": true,
+              "Display": "Offset Distance"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "oppose2d",
+      "Display": "Transform \u003E Oppose",
+      "Group": "geom3d",
+      "Variants": [
+        {
+          "RuleSubType": "oppose2d",
+          "Params": [
+            {
+              "Key": "dist",
+              "Type": "number",
+              "Required": true,
+              "Display": "dist"
+            },
+            {
+              "Key": "ent1",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent1"
+            },
+            {
+              "Key": "ent2",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent2"
+            },
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "part2",
+              "Type": "string",
+              "Required": true,
+              "Display": "part2"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "oppose3d",
+      "Display": "Transform \u003E Oppose",
+      "Group": "geom3d",
+      "Variants": [
+        {
+          "RuleSubType": "oppose3d",
+          "Params": [
+            {
+              "Key": "dist",
+              "Type": "number",
+              "Required": true,
+              "Display": "dist"
+            },
+            {
+              "Key": "ent1",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent1"
+            },
+            {
+              "Key": "ent2",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent2"
+            },
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "part2",
+              "Type": "string",
+              "Required": true,
+              "Display": "part2"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "part",
+      "Display": "Part",
+      "Group": "container",
+      "Variants": [
+        {
+          "RuleSubType": "part",
+          "Params": [
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            },
+            {
+              "Key": "newdef",
+              "Type": "bool",
+              "Required": false,
+              "Display": "New Definition?",
+              "Notes": "Optional; Whether each instance is treated as new definition"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "pline",
+      "Display": "Curve \u003E Polyline",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "RuleSubType": "pline",
+          "Params": [
+            {
+              "Key": "bulgelist",
+              "Type": "list",
+              "Required": false,
+              "Display": "List of Bulges"
+            },
+            {
+              "Key": "closed",
+              "Type": "boolean",
+              "Required": true
+            },
+            {
+              "Key": "pointlist",
+              "Type": "list",
+              "Required": true,
+              "Display": "Point List"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "point",
+      "Display": "Point",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "RuleSubType": "point",
+          "Params": [
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true,
+              "Display": "Point 1"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "polygon",
+      "Display": "Curve \u003E Polygon",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "RuleSubType": "polygon",
+          "Params": [
+            {
+              "Key": "filletradius",
+              "Aliases": [
+                "fr"
+              ],
+              "Type": "number",
+              "Required": false
+            },
+            {
+              "Key": "pointlist",
+              "Type": "list",
+              "Required": true,
+              "Display": "Point List"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "prect",
+      "Display": "Pattern \u003ERectangular ",
+      "Group": "pattern3d",
+      "Variants": [
+        {
+          "RuleSubType": "prect",
+          "Params": [
+            {
+              "Key": "dist",
+              "Type": "number",
+              "Required": true,
+              "Display": "dist"
+            },
+            {
+              "Key": "dist2",
+              "Type": "number",
+              "Required": true,
+              "Display": "dist2"
+            },
+            {
+              "Key": "ent1",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent1"
+            },
+            {
+              "Key": "ent2",
+              "Type": "ref",
+              "Required": true,
+              "Display": "ent2"
+            },
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "part2",
+              "Type": "string",
+              "Required": true,
+              "Display": "part2"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "radialdim",
+      "Display": "Dimension \u003ERadial",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "RuleSubType": "radialdim",
+          "Params": [
+            {
+              "Key": "ent1",
+              "Aliases": [
+                "e1"
+              ],
+              "Type": "ref",
+              "Required": true
+            },
+            {
+              "Key": "pointplace",
+              "Type": "point",
+              "Required": true,
+              "Display": "Point to place on"
+            },
+            {
+              "Key": "text",
+              "Type": "string",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "rect",
+      "Display": "Rectangle \u003E 2 Points",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "Mode": "2p",
+          "RuleSubType": "Rect-2p",
+          "Params": [
+            {
+              "Key": "filletradius",
+              "Aliases": [
+                "fr"
+              ],
+              "Type": "number",
+              "Required": false
+            },
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true,
+              "Display": "Point 1"
+            },
+            {
+              "Key": "point2",
+              "Aliases": [
+                "p2"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "plw",
+          "RuleSubType": "Rect-plw",
+          "Params": [
+            {
+              "Key": "filletradius",
+              "Aliases": [
+                "fr"
+              ],
+              "Type": "number",
+              "Required": false
+            },
+            {
+              "Key": "length",
+              "Aliases": [
+                "l"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Length"
+            },
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true,
+              "Display": "Point 1"
+            },
+            {
+              "Key": "width",
+              "Aliases": [
+                "w"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Width"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "revolve",
+      "Display": "Operation \u003ERevolve",
+      "Group": "Entity3d",
+      "Variants": [
+        {
+          "Mode": "Add",
+          "RuleSubType": "Revolve-Add",
+          "Params": [
+            {
+              "Key": "angle",
+              "Type": "number",
+              "Required": true,
+              "Display": "Angle"
+            },
+            {
+              "Key": "axis",
+              "Type": "vector",
+              "Required": true,
+              "Display": "Axis"
+            },
+            {
+              "Key": "profile",
+              "Type": "ref",
+              "Required": true,
+              "Display": "Profile"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "cut",
+          "RuleSubType": "Revolve-Cut",
+          "Params": [
+            {
+              "Key": "angle",
+              "Type": "number",
+              "Required": true,
+              "Display": "Angle"
+            },
+            {
+              "Key": "axis",
+              "Type": "vector",
+              "Required": true,
+              "Display": "Axis"
+            },
+            {
+              "Key": "profile",
+              "Type": "ref",
+              "Required": true,
+              "Display": "Profile"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        },
+        {
+          "Mode": "new",
+          "RuleSubType": "Revolve-New",
+          "Params": [
+            {
+              "Key": "angle",
+              "Type": "number",
+              "Required": true,
+              "Display": "Angle"
+            },
+            {
+              "Key": "axis",
+              "Type": "vector",
+              "Required": true,
+              "Display": "Axis"
+            },
+            {
+              "Key": "profile",
+              "Type": "ref",
+              "Required": true,
+              "Display": "Profile"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "rotate",
+      "Display": "Transform \u003ERotate",
+      "Group": "action2d",
+      "Variants": [
+        {
+          "RuleSubType": "rotate",
+          "Params": [
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "rotate3d",
+      "Display": "Transform \u003E Rotate",
+      "Group": "action3d",
+      "Variants": [
+        {
+          "RuleSubType": "rotate3d",
+          "Params": [
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "pnt1",
+              "Type": "point",
+              "Required": true,
+              "Display": "pnt1"
+            },
+            {
+              "Key": "rotang",
+              "Type": "number",
+              "Required": true,
+              "Display": "rotang"
+            },
+            {
+              "Key": "vec1",
+              "Type": "vector",
+              "Required": true,
+              "Display": "vec1"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "scale3d",
+      "Display": "Transform \u003E Scale",
+      "Group": "action3d",
+      "Variants": [
+        {
+          "RuleSubType": "scale3d",
+          "Params": [
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "pnt1",
+              "Type": "point",
+              "Required": false,
+              "Display": "pnt1"
+            },
+            {
+              "Key": "vec1",
+              "Type": "vector",
+              "Required": true,
+              "Display": "vec1"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "sheet",
+      "Display": "Sheet",
+      "Group": "container",
+      "Variants": [
+        {
+          "RuleSubType": "sheet",
+          "Params": [
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "shot",
+      "Display": "Drawing",
+      "Group": "container",
+      "Variants": [
+        {
+          "RuleSubType": "shot",
+          "Params": [
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "sketch",
+      "Display": "Sketch",
+      "Group": "container",
+      "Variants": [
+        {
+          "RuleSubType": "sketch",
+          "Params": [
+            {
+              "Key": "on",
+              "Type": "plane",
+              "Required": false,
+              "Display": "On Plane"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "sphere",
+      "Display": "CSG \u003E Sphere",
+      "Group": "Entity3d",
+      "Variants": [
+        {
+          "RuleSubType": "sphere",
+          "Params": [
+            {
+              "Key": "radius",
+              "Aliases": [
+                "r"
+              ],
+              "Type": "number",
+              "Required": true,
+              "Display": "Radius"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "spline",
+      "Display": "Curve \u003ESpline Curve",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "RuleSubType": "spline",
+          "Params": [
+            {
+              "Key": "pointlist",
+              "Type": "list",
+              "Required": true,
+              "Display": "Point List"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "subtract",
+      "Display": "Boolean \u003ESubtract",
+      "Group": "boolean3d",
+      "Variants": [
+        {
+          "RuleSubType": "subtract",
+          "Params": [
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "part2",
+              "Type": "string",
+              "Required": true,
+              "Display": "part2"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "sweep",
+      "Display": "Operation \u003ESweep",
+      "Group": "entity3d",
+      "Variants": [
+        {
+          "RuleSubType": "sweep",
+          "Params": [
+            {
+              "Key": "Path",
+              "Aliases": [],
+              "Type": "string",
+              "Required": true,
+              "Display": "Path"
+            },
+            {
+              "Key": "profile",
+              "Aliases": [
+                "p"
+              ],
+              "Type": "ref",
+              "Required": true,
+              "Display": "Profile"
+            },
+            {
+              "Key": "solid",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "Solid?"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "text",
+      "Display": "Annotation \u003E Text",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "RuleSubType": "text",
+          "Params": [
+            {
+              "Key": "hormode",
+              "Type": "string",
+              "Required": true
+            },
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "text",
+              "Type": "string",
+              "Required": true
+            },
+            {
+              "Key": "textht",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "vermode",
+              "Type": "string",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "textleader",
+      "Display": "Annotation \u003E Leader With MText",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "RuleSubType": "textleader",
+          "Params": [
+            {
+              "Key": "hasarrow",
+              "Type": "boolean",
+              "Required": true
+            },
+            {
+              "Key": "plist",
+              "Type": "list",
+              "Required": true,
+              "Display": "Point List"
+            },
+            {
+              "Key": "point1",
+              "Aliases": [
+                "p1"
+              ],
+              "Type": "point",
+              "Required": true
+            },
+            {
+              "Key": "text",
+              "Type": "string",
+              "Required": true
+            },
+            {
+              "Key": "textht",
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "width",
+              "Aliases": [
+                "w"
+              ],
+              "Type": "number",
+              "Required": true
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "torus",
+      "Display": "CSG \u003E Torus",
+      "Group": "Entity3d",
+      "Variants": [
+        {
+          "RuleSubType": "torus",
+          "Params": [
+            {
+              "Key": "innerRadius",
+              "Type": "number",
+              "Required": true,
+              "Display": "Radius Inner"
+            },
+            {
+              "Key": "outerRadius",
+              "Type": "number",
+              "Required": true,
+              "Display": "Radius Outer"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "trim",
+      "Display": "Transform \u003ETrim",
+      "Group": "action2d",
+      "Variants": [
+        {
+          "RuleSubType": "trim",
+          "Params": [
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "twod",
+      "Display": "Block",
+      "Group": "container",
+      "Variants": [
+        {
+          "RuleSubType": "twod",
+          "Params": [
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "union",
+      "Display": "Boolean \u003EUnion",
+      "Group": "boolean3d",
+      "Variants": [
+        {
+          "RuleSubType": "union",
+          "Params": [
+            {
+              "Key": "part1",
+              "Type": "string",
+              "Required": true,
+              "Display": "part1"
+            },
+            {
+              "Key": "part2",
+              "Type": "string",
+              "Required": true,
+              "Display": "part2"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ShortKey": "workpoint",
+      "Display": "Work Point",
+      "Group": "Entity2d",
+      "Variants": [
+        {
+          "RuleSubType": "workpoint",
+          "Params": [
+            {
+              "Key": "Entity",
+              "Type": "ref",
+              "Required": true,
+              "Display": "Entity"
+            },
+            {
+              "Key": "Part",
+              "Type": "ref",
+              "Required": true,
+              "Display": "Part"
+            },
+            {
+              "Key": "ViewName",
+              "Type": "ref",
+              "Required": true,
+              "Display": "View Name"
+            },
+            {
+              "Key": "qty",
+              "Type": "number",
+              "Required": false,
+              "Display": "Quantity",
+              "Notes": "Optional; default is 1"
+            },
+            {
+              "Key": "name",
+              "Type": "string",
+              "Required": false,
+              "Display": "Name",
+              "Notes": "Optional; logical identifier of this feature"
+            },
+            {
+              "Key": "evalif",
+              "Type": "boolean",
+              "Required": false,
+              "Display": "EvaluateIf",
+              "Notes": "Optional; default is null"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

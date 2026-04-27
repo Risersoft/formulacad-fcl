@@ -1,0 +1,3356 @@
+[
+  {
+    "Name": "Abs",
+    "Display": "@Abs(value)",
+    "Summary": "Calculates a number's absolute value.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "ACos",
+    "Display": "@ACos(value)",
+    "Summary": "Returns the angle (measured in radians) having the specified value of it's hyperbolic cosine function.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "ACosDeg",
+    "Display": "@ACosDeg(x)",
+    "Summary": "Inverse cosine. Returns angle in degrees.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number"
+    ],
+    "ArgNames": [
+      "x"
+    ]
+  },
+  {
+    "Name": "ACosh",
+    "Display": "@ACosh(value)",
+    "Summary": "Returns the angle (measured in radians) having the specified value of it's hyperbolic cosine function.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "And",
+    "Display": "@And(boolean1, boolean2)",
+    "Summary": "Logical-AND returns the boolean value, FALSE, if at least one argument has a value of FALSE. When all arguments are TRUE, then this function returns TRUE.",
+    "ArityMin": 1,
+    "ArityMax": 2147483647,
+    "ReturnType": "bool",
+    "ArgTypes": [
+      "bool",
+      "bool"
+    ],
+    "ArgNames": [
+      "boolean1",
+      "boolean2"
+    ]
+  },
+  {
+    "Name": "AngleDegXY",
+    "Display": "@AngleDegXY(p)",
+    "Summary": "Angle of a vector (point) in degrees in the XY plane (atan2).",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Point"
+    ],
+    "ArgNames": [
+      "p"
+    ]
+  },
+  {
+    "Name": "AreaFraction",
+    "Display": "@AreaFraction(hOverd)",
+    "Summary": "AreaFraction",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number"
+    ],
+    "ArgNames": [
+      "hOverd"
+    ]
+  },
+  {
+    "Name": "ASin",
+    "Display": "@ASin(value)",
+    "Summary": "Returns the angle (measured in radians) having the specified value of it's hyperbolic sine function.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "ASinDeg",
+    "Display": "@ASinDeg(x)",
+    "Summary": "Inverse sine. Returns angle in degrees.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number"
+    ],
+    "ArgNames": [
+      "x"
+    ]
+  },
+  {
+    "Name": "ASinh",
+    "Display": "@ASinh(value)",
+    "Summary": "Returns the angle (measured in radians) having the specified value of it's hyperbolic sine function.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "ATan",
+    "Display": "@ATan(x_ordinate, y_abscissa)",
+    "Summary": "Calculates the angle made with the x-axis on a Cartesian coordinate plane by the specified (x, y) coordinates.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "x_ordinate",
+      "y_abscissa"
+    ]
+  },
+  {
+    "Name": "ATan2",
+    "Display": "@ATan2(x, y)",
+    "Summary": "Returns the angle from the positive X-axis to the point (x, y). Note argument order is (x, y).",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "x",
+      "y"
+    ]
+  },
+  {
+    "Name": "ATan2Deg",
+    "Display": "@ATan2Deg(y, x)",
+    "Summary": "Inverse tangent of y/x using both arguments. Returns angle in degrees.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "y",
+      "x"
+    ]
+  },
+  {
+    "Name": "ATanDeg",
+    "Display": "@ATanDeg(x)",
+    "Summary": "Inverse tangent. Returns angle in degrees.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number"
+    ],
+    "ArgNames": [
+      "x"
+    ]
+  },
+  {
+    "Name": "ATanh",
+    "Display": "@ATanh(value)",
+    "Summary": "Calculates the hyperbolic tangent of a specified angle measured in radians.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "AveDev",
+    "Display": "@AveDev(number1, number2)",
+    "Summary": "Returns the average deviation from the average of all numeric values.",
+    "ArityMin": 1,
+    "ArityMax": 2147483647,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "number1",
+      "number2"
+    ]
+  },
+  {
+    "Name": "Average",
+    "Display": "@Average(value1, value2)",
+    "Summary": "Calculates an average (arithmetic mean) for a series of numbers.",
+    "ArityMin": 1,
+    "ArityMax": 2147483647,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "value1",
+      "value2"
+    ]
+  },
+  {
+    "Name": "BBC",
+    "Display": "@BBC(str1, datakey)",
+    "Summary": "BBC",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "String",
+      "String"
+    ],
+    "ArgNames": [
+      "str1",
+      "datakey"
+    ]
+  },
+  {
+    "Name": "BomParam",
+    "Display": "@BomParam(paramcode)",
+    "Summary": "Bom Parameter",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "String"
+    ],
+    "ArgNames": [
+      "paramcode"
+    ]
+  },
+  {
+    "Name": "Ceiling",
+    "Display": "@Ceiling(number)",
+    "Summary": "Returns the smallest whole number greater than or equal to the given number",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "number"
+    ]
+  },
+  {
+    "Name": "CenPoint",
+    "Display": "@CenPoint(str1)",
+    "Summary": "CenPoint",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "String"
+    ],
+    "ArgNames": [
+      "str1"
+    ]
+  },
+  {
+    "Name": "Char",
+    "Display": "@Char(number)",
+    "Summary": "Returns the character specified by the code number from the character set for your computer.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "string",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "number"
+    ]
+  },
+  {
+    "Name": "Choose",
+    "Display": "@CHOOSE(index, value1, value2, ...)",
+    "Summary": "Choose from elements",
+    "ArityMin": 2,
+    "ArityMax": 2147483647,
+    "ReturnType": "expr",
+    "ArgTypes": [
+      "number",
+      "expr",
+      "expr"
+    ],
+    "ArgNames": [
+      "index",
+      "value1",
+      "value2"
+    ]
+  },
+  {
+    "Name": "Clamp",
+    "Display": "@Clamp(x, lo, hi)",
+    "Summary": "Clamp a value to the inclusive range [lo..hi].",
+    "ArityMin": 3,
+    "ArityMax": 3,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "x",
+      "lo",
+      "hi"
+    ]
+  },
+  {
+    "Name": "Clean",
+    "Display": "@Clean(str1)",
+    "Summary": "Clean",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "String",
+    "ArgTypes": [
+      "String"
+    ],
+    "ArgNames": [
+      "str1"
+    ]
+  },
+  {
+    "Name": "clxEllipse",
+    "Display": "@clxEllipse(majdia, mindia, y1)",
+    "Summary": "Chord Length of Ellipse // to X-axis",
+    "ArityMin": 3,
+    "ArityMax": 3,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "majdia",
+      "mindia",
+      "y1"
+    ]
+  },
+  {
+    "Name": "clyEllipse",
+    "Display": "@clyEllipse(majdia, mindia, x1)",
+    "Summary": "Chord Length of Ellipse // to Y-axis",
+    "ArityMin": 3,
+    "ArityMax": 3,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "majdia",
+      "mindia",
+      "x1"
+    ]
+  },
+  {
+    "Name": "Code",
+    "Display": "@Code(Text)",
+    "Summary": "Gives you the numeric code corresponding the the first character in a specific text string.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "string",
+    "ArgTypes": [
+      "string"
+    ],
+    "ArgNames": [
+      "Text"
+    ]
+  },
+  {
+    "Name": "Combin",
+    "Display": "@Combin(number, numberChosen)",
+    "Summary": "Returns the number of possible combinations (with repetitions) given a set of items and a number of chosen items from that set.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "number",
+      "numberChosen"
+    ]
+  },
+  {
+    "Name": "CombinA",
+    "Display": "@CombinA(number, numberChosen)",
+    "Summary": "Returns the number of possible combinations (with repetitions) given a set of items and a number of chosen items from that set.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "number",
+      "numberChosen"
+    ]
+  },
+  {
+    "Name": "Concatenate",
+    "Display": "@Concatenate(text1, text2, textN)",
+    "Summary": "Combines two or more text values into a single text string.",
+    "ArityMin": 1,
+    "ArityMax": 2147483647,
+    "ReturnType": "string",
+    "ArgTypes": [
+      "string",
+      "string",
+      "string"
+    ],
+    "ArgNames": [
+      "text1",
+      "text2",
+      "textN"
+    ]
+  },
+  {
+    "Name": "Cos",
+    "Display": "@Cos(value)",
+    "Summary": "Returns the angle (measured in radians) having the specified value of it's hyperbolic cosine function.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "CosDeg",
+    "Display": "@CosDeg(deg)",
+    "Summary": "Cosine of an angle specified in degrees.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number"
+    ],
+    "ArgNames": [
+      "deg"
+    ]
+  },
+  {
+    "Name": "Cosh",
+    "Display": "@Cosh(value)",
+    "Summary": "Returns the angle (measured in radians) having the specified value of it's hyperbolic cosine function.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "Count",
+    "Display": "@Count(Value1, Value2, ValueN)",
+    "Summary": "Counts how many cells are not blank.",
+    "ArityMin": 1,
+    "ArityMax": 2147483647,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "Value1",
+      "Value2",
+      "ValueN"
+    ]
+  },
+  {
+    "Name": "CountA",
+    "Display": "@CountA(Value1, Value2, ValueN)",
+    "Summary": "Counts how many cells are not blank.",
+    "ArityMin": 1,
+    "ArityMax": 2147483647,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "Value1",
+      "Value2",
+      "ValueN"
+    ]
+  },
+  {
+    "Name": "CurvePlane",
+    "Display": "@CurvePlane(CurveName)",
+    "Summary": "CurvePlane",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Plane",
+    "ArgTypes": [
+      "String"
+    ],
+    "ArgNames": [
+      "CurveName"
+    ]
+  },
+  {
+    "Name": "Degrees",
+    "Display": "@Degrees(radians)",
+    "Summary": "Converts radians to degrees.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "radians"
+    ]
+  },
+  {
+    "Name": "DegToRad",
+    "Display": "@DegToRad(deg)",
+    "Summary": "Convert degrees to radians.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number"
+    ],
+    "ArgNames": [
+      "deg"
+    ]
+  },
+  {
+    "Name": "Delta",
+    "Display": "@Delta(number1, number2)",
+    "Summary": "Compares two numbers and returns 1 if they are equal or 0 if they are not.",
+    "ArityMin": 1,
+    "ArityMax": 2,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "number1",
+      "number2"
+    ]
+  },
+  {
+    "Name": "DiffRoundM",
+    "Display": "@DiffRoundM(base, diff, mult, direction)",
+    "Summary": "Rounds a difference value to the nearest specified multiple",
+    "ArityMin": 4,
+    "ArityMax": 4,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "base",
+      "diff",
+      "mult",
+      "direction"
+    ]
+  },
+  {
+    "Name": "DistanceXY",
+    "Display": "@DistanceXY(a, b)",
+    "Summary": "Distance between two points in the XY plane (ignores Z).",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Point",
+      "Point"
+    ],
+    "ArgNames": [
+      "a",
+      "b"
+    ]
+  },
+  {
+    "Name": "ElemCount",
+    "Display": "@ElemCount(arr1)",
+    "Summary": "Element Count",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "List"
+    ],
+    "ArgNames": [
+      "arr1"
+    ]
+  },
+  {
+    "Name": "EndPoint",
+    "Display": "@EndPoint(str1, index)",
+    "Summary": "EndPoint",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "String",
+      "Number"
+    ],
+    "ArgNames": [
+      "str1",
+      "index"
+    ]
+  },
+  {
+    "Name": "EntData",
+    "Display": "@EntData(str1, datakey, defValue)",
+    "Summary": "EntData",
+    "ArityMin": 2,
+    "ArityMax": 3,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "String",
+      "String",
+      "Number"
+    ],
+    "ArgNames": [
+      "str1",
+      "datakey",
+      "defValue"
+    ]
+  },
+  {
+    "Name": "Eq",
+    "Display": "@Eq(a, b, eps)",
+    "Summary": "Returns True if two numbers are equal within tolerance eps. If eps=0 exact equality is used.",
+    "ArityMin": 2,
+    "ArityMax": 3,
+    "ReturnType": "Boolean",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "a",
+      "b",
+      "eps"
+    ]
+  },
+  {
+    "Name": "ErrorType",
+    "Display": "@ErrorType(error_value)",
+    "Summary": "When an error value is returned, the ERRORTYPE function returns a numeric value corresponding to the UltraCalcErrorCode enumeration.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "error_value"
+    ]
+  },
+  {
+    "Name": "Even",
+    "Display": "@Even(Number)",
+    "Summary": "Rounds a positive number up and a negative number down to the nearest even integer.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "Number"
+    ]
+  },
+  {
+    "Name": "Exp",
+    "Display": "@Exp(exponent)",
+    "Summary": "Calculates the mathematical constant, e, raised to the specified power.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "exponent"
+    ]
+  },
+  {
+    "Name": "Fact",
+    "Display": "@Fact(number)",
+    "Summary": "Returns the double factorial of a number.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "number"
+    ]
+  },
+  {
+    "Name": "FactDouble",
+    "Display": "@FactDouble(number)",
+    "Summary": "Returns the double factorial of a number.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "number"
+    ]
+  },
+  {
+    "Name": "False",
+    "Display": "@False()",
+    "Summary": "A constant function always returning the FALSE value of Boolean logic.",
+    "ArityMin": 0,
+    "ArityMax": 0,
+    "ReturnType": "bool",
+    "ArgTypes": [],
+    "ArgNames": []
+  },
+  {
+    "Name": "Find",
+    "Display": "@Find(text_to_find, text_to_search, starting_point)",
+    "Summary": "Finds one piece of text within another piece of text.",
+    "ArityMin": 2,
+    "ArityMax": 3,
+    "ReturnType": "string",
+    "ArgTypes": [
+      "string",
+      "string",
+      "number"
+    ],
+    "ArgNames": [
+      "text_to_find",
+      "text_to_search",
+      "starting_point"
+    ]
+  },
+  {
+    "Name": "FindText",
+    "Display": "@FindText(strFindWhat, strFindIn, startnum)",
+    "Summary": "Finds the existence of one string within another",
+    "ArityMin": 3,
+    "ArityMax": 3,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "String",
+      "String",
+      "Number"
+    ],
+    "ArgNames": [
+      "strFindWhat",
+      "strFindIn",
+      "startnum"
+    ]
+  },
+  {
+    "Name": "Fixed",
+    "Display": "@Fixed(value, decimal_places, exclude_thousands_separators)",
+    "Summary": "Formats a numeric value rounded to a specified number of decimal places and with optional thousands separators.",
+    "ArityMin": 1,
+    "ArityMax": 3,
+    "ReturnType": "string",
+    "ArgTypes": [
+      "number",
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "value",
+      "decimal_places",
+      "exclude_thousands_separators"
+    ]
+  },
+  {
+    "Name": "Floor",
+    "Display": "@Floor(value)",
+    "Summary": "Calculates the next lesser whole number for a specified numeric value.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "FlowAngleDeg",
+    "Display": "@FlowAngleDeg(p, seed, scale)",
+    "Summary": "Flow-field direction angle in degrees (0..360) using Noise2 at a given spatial scale.",
+    "ArityMin": 3,
+    "ArityMax": 3,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Point",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "p",
+      "seed",
+      "scale"
+    ]
+  },
+  {
+    "Name": "Gcd",
+    "Display": "@Gcd(number1, number2,_number3,_,_numberN)",
+    "Summary": "Returns the greatest common divisor of integer values.",
+    "ArityMin": 1,
+    "ArityMax": 2147483647,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "number1",
+      "number2,_number3,_,_numberN"
+    ]
+  },
+  {
+    "Name": "GearProfile",
+    "Display": "@GearProfile(teeth, modVal, paDeg, isInternal)",
+    "Summary": "Generates a discrete 2D point list for an involute gear.",
+    "ArityMin": 4,
+    "ArityMax": 4,
+    "ReturnType": "List",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number",
+      "Boolean"
+    ],
+    "ArgNames": [
+      "teeth",
+      "modVal",
+      "paDeg",
+      "isInternal"
+    ]
+  },
+  {
+    "Name": "GeStep",
+    "Display": "@GeStep(number, step)",
+    "Summary": "Compares two numbers and returns 1 the first number is greater than or equal to the second or returns 0 if not.",
+    "ArityMin": 1,
+    "ArityMax": 2,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "number",
+      "step"
+    ]
+  },
+  {
+    "Name": "Grid",
+    "Display": "@Grid(i, cols)",
+    "Summary": "Convert a 1-based linear index i into integer (col,row) for a grid with given columns. Returned as (col,row,0).",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "i",
+      "cols"
+    ]
+  },
+  {
+    "Name": "GridXY",
+    "Display": "@GridXY(i, cols, pitch)",
+    "Summary": "Convert a 1-based linear index i into XY coordinates using a grid with given columns and pitch. Returned as (x,y,0).",
+    "ArityMin": 3,
+    "ArityMax": 3,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "i",
+      "cols",
+      "pitch"
+    ]
+  },
+  {
+    "Name": "Hash01",
+    "Display": "@Hash01(i, seed)",
+    "Summary": "Deterministic pseudo-random number in [0..1) derived from (i, seed).",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "i",
+      "seed"
+    ]
+  },
+  {
+    "Name": "Hash2",
+    "Display": "@Hash2(i, seed)",
+    "Summary": "Deterministic pseudo-random 2D point (u,v,0) where u and v are in [0..1), derived from (i, seed).",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "i",
+      "seed"
+    ]
+  },
+  {
+    "Name": "HPerd",
+    "Display": "@HPerd(areaFraction)",
+    "Summary": "HPerd",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number"
+    ],
+    "ArgNames": [
+      "areaFraction"
+    ]
+  },
+  {
+    "Name": "If",
+    "Display": "@If(condition, value_if_true, value_if_false)",
+    "Summary": "Returns value_if_true when condition is true, otherwise returns value_if_false.",
+    "ArityMin": 3,
+    "ArityMax": 3,
+    "ReturnType": "expr",
+    "ArgTypes": [
+      "bool",
+      "expr",
+      "expr"
+    ],
+    "ArgNames": [
+      "condition",
+      "value_if_true",
+      "value_if_false"
+    ]
+  },
+  {
+    "Name": "IfError",
+    "Display": "@IfError(value, value_if_error)",
+    "Summary": "Returns one of two values depending on whether or not the first value is an error or not.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "expr",
+    "ArgTypes": [
+      "expr",
+      "expr"
+    ],
+    "ArgNames": [
+      "value",
+      "value_if_error"
+    ]
+  },
+  {
+    "Name": "Int",
+    "Display": "@Int(value)",
+    "Summary": "Calculates the interest rate yielded by a security investment redeemable at a future date, such as a zero coupon bond.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "InterPoint",
+    "Display": "@InterPoint(str1, str2, index)",
+    "Summary": "InterPoint",
+    "ArityMin": 3,
+    "ArityMax": 3,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "String",
+      "String",
+      "Number"
+    ],
+    "ArgNames": [
+      "str1",
+      "str2",
+      "index"
+    ]
+  },
+  {
+    "Name": "IsBlank",
+    "Display": "@IsBlank(value)",
+    "Summary": "Returns TRUE if the specified value is blank.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "bool",
+    "ArgTypes": [
+      "expr"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "IsErr",
+    "Display": "@IsErr(value)",
+    "Summary": "Returns TRUE if the specified value is any error value without exception.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "bool",
+    "ArgTypes": [
+      "expr"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "IsError",
+    "Display": "@IsError(value)",
+    "Summary": "Returns TRUE if the specified value is any error value without exception.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "bool",
+    "ArgTypes": [
+      "expr"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "IsEven",
+    "Display": "@IsEven(value)",
+    "Summary": "Returns TRUE if the specified value is an even number.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "bool",
+    "ArgTypes": [
+      "expr"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "IsInList",
+    "Display": "@IsInList(str1, arr...)",
+    "Summary": "IsInList",
+    "ArityMin": 2,
+    "ArityMax": 2147483647,
+    "ReturnType": "Boolean",
+    "ArgTypes": [
+      "String",
+      "variant"
+    ],
+    "ArgNames": [
+      "str1",
+      "arr"
+    ]
+  },
+  {
+    "Name": "IsLogical",
+    "Display": "@IsLogical(value)",
+    "Summary": "Returns TRUE if the specified value refers to a two-state logic or Boolean value.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "bool",
+    "ArgTypes": [
+      "expr"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "IsNa",
+    "Display": "@IsNa(value)",
+    "Summary": "Returns TRUE if an error value is #N/A (not applicable.)",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "bool",
+    "ArgTypes": [
+      "expr"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "IsNonText",
+    "Display": "@IsNonText(value)",
+    "Summary": "Returns TRUE if the specified value refers to any not-text value.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "bool",
+    "ArgTypes": [
+      "expr"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "IsNumber",
+    "Display": "@IsNumber(value)",
+    "Summary": "Returns TRUE if the specified value refers to a numeric value.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "bool",
+    "ArgTypes": [
+      "expr"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "IsOdd",
+    "Display": "@IsOdd(value)",
+    "Summary": "Returns TRUE if the specified value is an odd number.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "bool",
+    "ArgTypes": [
+      "expr"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "IsRef",
+    "Display": "@IsRef(reference)",
+    "Summary": "Returns TRUE if the specified value is an UltraCalc reference.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "bool",
+    "ArgTypes": [
+      "expr"
+    ],
+    "ArgNames": [
+      "reference"
+    ]
+  },
+  {
+    "Name": "IsText",
+    "Display": "@IsText(value)",
+    "Summary": "Returns TRUE if the specified value refers to a text (or string) value.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "bool",
+    "ArgTypes": [
+      "expr"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "ItemParam",
+    "Display": "@ItemParam(itemnumfixed, paramcode)",
+    "Summary": "Item Parameter",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "String",
+      "String"
+    ],
+    "ArgNames": [
+      "itemnumfixed",
+      "paramcode"
+    ]
+  },
+  {
+    "Name": "Jitter",
+    "Display": "@Jitter(p, amount, i, seed)",
+    "Summary": "Add a deterministic random offset (jitter) to a point in XY. Useful for organic imperfections.",
+    "ArityMin": 4,
+    "ArityMax": 4,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Point",
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "p",
+      "amount",
+      "i",
+      "seed"
+    ]
+  },
+  {
+    "Name": "KeyValue",
+    "Display": "@KeyValue(arr1, str1)",
+    "Summary": "Value of Key in a list",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "List",
+      "String"
+    ],
+    "ArgNames": [
+      "arr1",
+      "str1"
+    ]
+  },
+  {
+    "Name": "LCase",
+    "Display": "@LCase(expr)",
+    "Summary": "LCase",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "String",
+    "ArgTypes": [
+      "String"
+    ],
+    "ArgNames": [
+      "expr"
+    ]
+  },
+  {
+    "Name": "Lcm",
+    "Display": "@Lcm(number1, number2,_number3,_,_numberN)",
+    "Summary": "Returns the least common multiple of integer values.",
+    "ArityMin": 1,
+    "ArityMax": 2147483647,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "number1",
+      "number2,_number3,_,_numberN"
+    ]
+  },
+  {
+    "Name": "Left",
+    "Display": "@Left(text_value, num_chars)",
+    "Summary": "Gets the leftmost characters from a text value, up to the specified number of characters.",
+    "ArityMin": 1,
+    "ArityMax": 2,
+    "ReturnType": "string",
+    "ArgTypes": [
+      "string",
+      "number"
+    ],
+    "ArgNames": [
+      "text_value",
+      "num_chars"
+    ]
+  },
+  {
+    "Name": "Len",
+    "Display": "@Len(text_value)",
+    "Summary": "Counts the number of characters in a text value.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "string",
+    "ArgTypes": [
+      "string"
+    ],
+    "ArgNames": [
+      "text_value"
+    ]
+  },
+  {
+    "Name": "Length",
+    "Display": "@Length(expr)",
+    "Summary": "Length",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "variant"
+    ],
+    "ArgNames": [
+      "expr"
+    ]
+  },
+  {
+    "Name": "LengthXY",
+    "Display": "@LengthXY(p)",
+    "Summary": "Compute XY length (magnitude) of a point treated as a vector.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Point"
+    ],
+    "ArgNames": [
+      "p"
+    ]
+  },
+  {
+    "Name": "Lerp",
+    "Display": "@Lerp(a, b, t)",
+    "Summary": "Linear interpolation between a and b using parameter t.",
+    "ArityMin": 3,
+    "ArityMax": 3,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "a",
+      "b",
+      "t"
+    ]
+  },
+  {
+    "Name": "List",
+    "Display": "@List(arrobj)",
+    "Summary": "Creates a list from supplied arguments",
+    "ArityMin": 1,
+    "ArityMax": 100,
+    "ReturnType": "List",
+    "ArgTypes": [
+      "variant"
+    ],
+    "ArgNames": [
+      "arrobj"
+    ]
+  },
+  {
+    "Name": "ListAdd",
+    "Display": "@ListAdd(arr1, arrobj...)",
+    "Summary": "Adds arguments to existing list",
+    "ArityMin": 2,
+    "ArityMax": 2147483647,
+    "ReturnType": "List",
+    "ArgTypes": [
+      "List",
+      "variant"
+    ],
+    "ArgNames": [
+      "arr1",
+      "arrobj"
+    ]
+  },
+  {
+    "Name": "ListFromString",
+    "Display": "@ListFromString(str1)",
+    "Summary": "Helper Function to Deserialize List",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "List",
+    "ArgTypes": [
+      "String"
+    ],
+    "ArgNames": [
+      "str1"
+    ]
+  },
+  {
+    "Name": "ListHasValue",
+    "Display": "@ListHasValue(arr1, obj)",
+    "Summary": "Checks if a value exists in a list",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Boolean",
+    "ArgTypes": [
+      "List",
+      "variant"
+    ],
+    "ArgNames": [
+      "arr1",
+      "obj"
+    ]
+  },
+  {
+    "Name": "Ln",
+    "Display": "@Ln(value)",
+    "Summary": "Calculates the natural logarithm of a specified numeric value.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "Log",
+    "Display": "@Log(value, base)",
+    "Summary": "Calculates a logarithm for a specified numeric value to the specified base.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "value",
+      "base"
+    ]
+  },
+  {
+    "Name": "Log10",
+    "Display": "@Log10(value)",
+    "Summary": "Calculates the logarithm (base 10) of a specified numeric value.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "Lower",
+    "Display": "@Lower(text_value)",
+    "Summary": "Converts a text value to all lowercase letters.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "string",
+    "ArgTypes": [
+      "string"
+    ],
+    "ArgNames": [
+      "text_value"
+    ]
+  },
+  {
+    "Name": "Matrix",
+    "Display": "@Matrix(m00, m01, m02, m03, m10, m11, m12, m13, m20, m21, m22, m23, m30, m31, m32, m33)",
+    "Summary": "Creates a Matrix from nos.",
+    "ArityMin": 16,
+    "ArityMax": 16,
+    "ReturnType": "Matrix",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number",
+      "Number",
+      "Number",
+      "Number",
+      "Number",
+      "Number",
+      "Number",
+      "Number",
+      "Number",
+      "Number",
+      "Number",
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "m00",
+      "m01",
+      "m02",
+      "m03",
+      "m10",
+      "m11",
+      "m12",
+      "m13",
+      "m20",
+      "m21",
+      "m22",
+      "m23",
+      "m30",
+      "m31",
+      "m32",
+      "m33"
+    ]
+  },
+  {
+    "Name": "MatrixD",
+    "Display": "@MatrixD(vector)",
+    "Summary": "Creates a displacement matrix",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Matrix",
+    "ArgTypes": [
+      "Vector"
+    ],
+    "ArgNames": [
+      "vector"
+    ]
+  },
+  {
+    "Name": "MatrixFromString",
+    "Display": "@MatrixFromString(str1)",
+    "Summary": "Creates a Matrix from (a00,a01,a02,a03|a10,a11,a12,a13|a10,a11,a12,a13|a20,a21,a22,a23|a30,a31,a32,a33)",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Matrix",
+    "ArgTypes": [
+      "String"
+    ],
+    "ArgNames": [
+      "str1"
+    ]
+  },
+  {
+    "Name": "MatrixL",
+    "Display": "@MatrixL(rows)",
+    "Summary": "Matrix from List",
+    "ArityMin": 1,
+    "ArityMax": 100,
+    "ReturnType": "Matrix",
+    "ArgTypes": [
+      "List"
+    ],
+    "ArgNames": [
+      "rows"
+    ]
+  },
+  {
+    "Name": "MatrixR",
+    "Display": "@MatrixR(axis, rot)",
+    "Summary": "Creates a rotation matrix",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Matrix",
+    "ArgTypes": [
+      "Vector",
+      "Number"
+    ],
+    "ArgNames": [
+      "axis",
+      "rot"
+    ]
+  },
+  {
+    "Name": "Max",
+    "Display": "@Max(Value1, value2, valueN)",
+    "Summary": "Gives you the largest numeric value out of a series.",
+    "ArityMin": 1,
+    "ArityMax": 2147483647,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "Value1",
+      "value2",
+      "valueN"
+    ]
+  },
+  {
+    "Name": "Median",
+    "Display": "@Median(Value1, value2, valueN)",
+    "Summary": "Calculates the median value of a specified list of numeric values.",
+    "ArityMin": 1,
+    "ArityMax": 2147483647,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "Value1",
+      "value2",
+      "valueN"
+    ]
+  },
+  {
+    "Name": "Mid",
+    "Display": "@Mid(text_value, starting_point, character_count)",
+    "Summary": "Gets a specified number of characters from the middle of a text string, starting from a specified position in that string.",
+    "ArityMin": 1,
+    "ArityMax": 3,
+    "ReturnType": "string",
+    "ArgTypes": [
+      "string",
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "text_value",
+      "starting_point",
+      "character_count"
+    ]
+  },
+  {
+    "Name": "midp",
+    "Display": "@midp(p1, p2)",
+    "Summary": "Middle point between two points",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Point",
+      "Point"
+    ],
+    "ArgNames": [
+      "p1",
+      "p2"
+    ]
+  },
+  {
+    "Name": "MidPoint",
+    "Display": "@MidPoint(str1)",
+    "Summary": "MidPoint",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "String"
+    ],
+    "ArgNames": [
+      "str1"
+    ]
+  },
+  {
+    "Name": "Min",
+    "Display": "@Min(number1, number2)",
+    "Summary": "Returns the minimum of a series of numbers.",
+    "ArityMin": 1,
+    "ArityMax": 2147483647,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "number1",
+      "number2"
+    ]
+  },
+  {
+    "Name": "Mod",
+    "Display": "@Mod(numerator, denominator)",
+    "Summary": "Gets the remainder following integer division of two numbers.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "numerator",
+      "denominator"
+    ]
+  },
+  {
+    "Name": "ModN",
+    "Display": "@ModN(a, m)",
+    "Summary": "Modulo that always returns a non-negative result (useful for patterns).",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "a",
+      "m"
+    ]
+  },
+  {
+    "Name": "MRound",
+    "Display": "@MRound(number, multiple)",
+    "Summary": "Rounds a number to the nearest multiple of another number.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "number",
+      "multiple"
+    ]
+  },
+  {
+    "Name": "Multinomial",
+    "Display": "@Multinomial(number1, number2,_number3,_,_numberN)",
+    "Summary": "Returns the multinomial of a set of numbers.",
+    "ArityMin": 1,
+    "ArityMax": 2147483647,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "number1",
+      "number2,_number3,_,_numberN"
+    ]
+  },
+  {
+    "Name": "MultiSplit",
+    "Display": "@MultiSplit(str1, sepchars...)",
+    "Summary": "Create Multi Level Split",
+    "ArityMin": 2,
+    "ArityMax": 2147483647,
+    "ReturnType": "List",
+    "ArgTypes": [
+      "String",
+      "variant"
+    ],
+    "ArgNames": [
+      "str1",
+      "sepchars"
+    ]
+  },
+  {
+    "Name": "mxlookup",
+    "Display": "@MXLOOKUP(value, tableCode, colLookup, colReturn, condition, exact)",
+    "Summary": "Lookup from design tables",
+    "ArityMin": 4,
+    "ArityMax": 6,
+    "ReturnType": "expr",
+    "ArgTypes": [
+      "expr",
+      "string",
+      "string",
+      "string",
+      "string",
+      "bool"
+    ],
+    "ArgNames": [
+      "value",
+      "tableCode",
+      "colLookup",
+      "colReturn",
+      "condition",
+      "exact"
+    ]
+  },
+  {
+    "Name": "NA",
+    "Display": "@NA()",
+    "Summary": "Returns #N/A!, the error value representing a not applicable result.",
+    "ArityMin": 0,
+    "ArityMax": 0,
+    "ReturnType": "expr",
+    "ArgTypes": [],
+    "ArgNames": []
+  },
+  {
+    "Name": "NACAProfile",
+    "Display": "@NACAProfile(nacaString, chord)",
+    "Summary": "Generate a closed point list for a 4-digit NACA airfoil.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "List",
+    "ArgTypes": [
+      "String",
+      "Number"
+    ],
+    "ArgNames": [
+      "nacaString",
+      "chord"
+    ]
+  },
+  {
+    "Name": "NearestDist",
+    "Display": "@NearestDist(p, seedCount, seed, w, h)",
+    "Summary": "Distance to the nearest seed (Worley F1).",
+    "ArityMin": 5,
+    "ArityMax": 5,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Point",
+      "Number",
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "p",
+      "seedCount",
+      "seed",
+      "w",
+      "h"
+    ]
+  },
+  {
+    "Name": "NearestIndex",
+    "Display": "@NearestIndex(p, seedCount, seed, w, h)",
+    "Summary": "Return the nearest seed index (cell id) for point p among seedCount seeds generated by RandInRect. Returns 1-based index; returns 0 when seedCount <= 0.",
+    "ArityMin": 5,
+    "ArityMax": 5,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Point",
+      "Number",
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "p",
+      "seedCount",
+      "seed",
+      "w",
+      "h"
+    ]
+  },
+  {
+    "Name": "NewLine",
+    "Display": "@NewLine()",
+    "Summary": "New Line Character",
+    "ArityMin": 0,
+    "ArityMax": 0,
+    "ReturnType": "String",
+    "ArgTypes": [],
+    "ArgNames": []
+  },
+  {
+    "Name": "Noise2",
+    "Display": "@Noise2(p, seed)",
+    "Summary": "2D value noise in [0..1) sampled at point p (uses XY). Use scaling (p/scale) for smoother fields.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Point",
+      "Number"
+    ],
+    "ArgNames": [
+      "p",
+      "seed"
+    ]
+  },
+  {
+    "Name": "NoiseAngleDeg",
+    "Display": "@NoiseAngleDeg(p, seed)",
+    "Summary": "Convert 2D noise at p into an angle in degrees (0..360).",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Point",
+      "Number"
+    ],
+    "ArgNames": [
+      "p",
+      "seed"
+    ]
+  },
+  {
+    "Name": "NormalizeXY",
+    "Display": "@NormalizeXY(p)",
+    "Summary": "Normalize a vector in XY (unit length). Z is preserved.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Point"
+    ],
+    "ArgNames": [
+      "p"
+    ]
+  },
+  {
+    "Name": "Not",
+    "Display": "@Not(boolean1)",
+    "Summary": "Logical-NOT returns the inverse boolean value of it's argument.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "bool",
+    "ArgTypes": [
+      "bool"
+    ],
+    "ArgNames": [
+      "boolean1"
+    ]
+  },
+  {
+    "Name": "Nr",
+    "Display": "@Nr(x)",
+    "Summary": "Numeric truth test. Returns True if the value is non-zero, False if it is zero.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Boolean",
+    "ArgTypes": [
+      "Number"
+    ],
+    "ArgNames": [
+      "x"
+    ]
+  },
+  {
+    "Name": "nth",
+    "Display": "@nth(arr1, index)",
+    "Summary": "Nth Element of List",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "List",
+      "Number"
+    ],
+    "ArgNames": [
+      "arr1",
+      "index"
+    ]
+  },
+  {
+    "Name": "Odd",
+    "Display": "@Odd(Number)",
+    "Summary": "Rounds a positive number up and a negative number down to the nearest odd integer.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "Number"
+    ]
+  },
+  {
+    "Name": "OffsetExtra",
+    "Display": "@OffsetExtra(dist, angle)",
+    "Summary": "Calculates Extra distance generated by offsetting two intersecting lines",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "dist",
+      "angle"
+    ]
+  },
+  {
+    "Name": "Or",
+    "Display": "@Or(boolean1, boolean2)",
+    "Summary": "Logical-OR returns the boolean value, TRUE, if at least one argument has a value of TRUE. When all arguments are FALSE, then this function returns FALSE.",
+    "ArityMin": 1,
+    "ArityMax": 2147483647,
+    "ReturnType": "bool",
+    "ArgTypes": [
+      "bool",
+      "bool"
+    ],
+    "ArgNames": [
+      "boolean1",
+      "boolean2"
+    ]
+  },
+  {
+    "Name": "pAdd",
+    "Display": "@pAdd(p1, p2)",
+    "Summary": "Add point between two points",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Point",
+      "Point"
+    ],
+    "ArgNames": [
+      "p1",
+      "p2"
+    ]
+  },
+  {
+    "Name": "pd",
+    "Display": "@pd(p1, p2)",
+    "Summary": "Distance between two points",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Point",
+      "Point"
+    ],
+    "ArgNames": [
+      "p1",
+      "p2"
+    ]
+  },
+  {
+    "Name": "Pi",
+    "Display": "@Pi()",
+    "Summary": "Returns the mathematical constant for the Greek letter, pi.",
+    "ArityMin": 0,
+    "ArityMax": 0,
+    "ReturnType": "number",
+    "ArgTypes": [],
+    "ArgNames": []
+  },
+  {
+    "Name": "Plane",
+    "Display": "@Plane(x, y, z, w, d)",
+    "Summary": "Creates a Plane from x,y,z,w,d",
+    "ArityMin": 2,
+    "ArityMax": 5,
+    "ReturnType": "Plane",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "x",
+      "y",
+      "z",
+      "w",
+      "d"
+    ]
+  },
+  {
+    "Name": "PlaneFromString",
+    "Display": "@PlaneFromString(str1)",
+    "Summary": "Creates a Plane from (x,y,z,w|d)",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Plane",
+    "ArgTypes": [
+      "String"
+    ],
+    "ArgNames": [
+      "str1"
+    ]
+  },
+  {
+    "Name": "PlaneVdi",
+    "Display": "@PlaneVdi(vector, d)",
+    "Summary": "Creates a Plane from vector and distance",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Plane",
+    "ArgTypes": [
+      "Vector",
+      "Number"
+    ],
+    "ArgNames": [
+      "vector",
+      "d"
+    ]
+  },
+  {
+    "Name": "PlaneVor",
+    "Display": "@PlaneVor(vector, origin)",
+    "Summary": "Creates a Plane from vector and origin",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Plane",
+    "ArgTypes": [
+      "Vector",
+      "Point"
+    ],
+    "ArgNames": [
+      "vector",
+      "origin"
+    ]
+  },
+  {
+    "Name": "pMult",
+    "Display": "@pMult(p1, mult)",
+    "Summary": "Multiply point by scalar",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Point",
+      "Number"
+    ],
+    "ArgNames": [
+      "p1",
+      "mult"
+    ]
+  },
+  {
+    "Name": "pOffset",
+    "Display": "@pOffset(p1, offset)",
+    "Summary": "Offset point by scalar",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Point",
+      "Number"
+    ],
+    "ArgNames": [
+      "p1",
+      "offset"
+    ]
+  },
+  {
+    "Name": "Point",
+    "Display": "@Point(x, y, z)",
+    "Summary": "Creates a Point from x,y,z",
+    "ArityMin": 2,
+    "ArityMax": 3,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "x",
+      "y",
+      "z"
+    ]
+  },
+  {
+    "Name": "PointFromString",
+    "Display": "@PointFromString(str1)",
+    "Summary": "Creates a Point from (x,y,z)",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "String"
+    ],
+    "ArgNames": [
+      "str1"
+    ]
+  },
+  {
+    "Name": "Polar",
+    "Display": "@Polar(r, angDeg)",
+    "Summary": "Create a point from polar coordinates (r, angleDeg). Z is set to 0.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "r",
+      "angDeg"
+    ]
+  },
+  {
+    "Name": "Power",
+    "Display": "@Power(value, exponent)",
+    "Summary": "Raises the specific number to a power.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "value",
+      "exponent"
+    ]
+  },
+  {
+    "Name": "Product",
+    "Display": "@Product(value1, value2, valueN)",
+    "Summary": "Multiplies a series of numbers to return their total product.",
+    "ArityMin": 1,
+    "ArityMax": 2147483647,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "value1",
+      "value2",
+      "valueN"
+    ]
+  },
+  {
+    "Name": "px",
+    "Display": "@px(p)",
+    "Summary": "X Co-Ordinate of Point Parameter",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Point"
+    ],
+    "ArgNames": [
+      "p"
+    ]
+  },
+  {
+    "Name": "py",
+    "Display": "@py(p)",
+    "Summary": "Y Co-Ordinate of Point Parameter",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Point"
+    ],
+    "ArgNames": [
+      "p"
+    ]
+  },
+  {
+    "Name": "pz",
+    "Display": "@pz(p)",
+    "Summary": "Z Co-Ordinate of Point Parameter",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Point"
+    ],
+    "ArgNames": [
+      "p"
+    ]
+  },
+  {
+    "Name": "QuadPoint",
+    "Display": "@QuadPoint(str1, index)",
+    "Summary": "QuadPoint",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "String",
+      "Number"
+    ],
+    "ArgNames": [
+      "str1",
+      "index"
+    ]
+  },
+  {
+    "Name": "Quotient",
+    "Display": "@Quotient(numerator, denominator)",
+    "Summary": "Performs integer division on two numbers disregarding any remainder.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "numerator",
+      "denominator"
+    ]
+  },
+  {
+    "Name": "Radians",
+    "Display": "@Radians(degrees)",
+    "Summary": "Converts degrees to radians.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "degrees"
+    ]
+  },
+  {
+    "Name": "RadToDeg",
+    "Display": "@RadToDeg(rad)",
+    "Summary": "Convert radians to degrees.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number"
+    ],
+    "ArgNames": [
+      "rad"
+    ]
+  },
+  {
+    "Name": "Rand",
+    "Display": "@Rand(bottom, top)",
+    "Summary": "Generates a pseudorandom integer between two specified numbers.",
+    "ArityMin": 0,
+    "ArityMax": 0,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "bottom",
+      "top"
+    ]
+  },
+  {
+    "Name": "RandBetween",
+    "Display": "@RandBetween(bottom, top)",
+    "Summary": "Generates a pseudorandom integer between two specified numbers.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "bottom",
+      "top"
+    ]
+  },
+  {
+    "Name": "RandInRect",
+    "Display": "@RandInRect(i, seed, w, h)",
+    "Summary": "Deterministic pseudo-random point uniformly distributed in a rectangle centered at origin.",
+    "ArityMin": 4,
+    "ArityMax": 4,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "i",
+      "seed",
+      "w",
+      "h"
+    ]
+  },
+  {
+    "Name": "Range01",
+    "Display": "@Range01(i, count)",
+    "Summary": "Map 1-based index i across count values to a 0..1 parameter (safe when count<=1).",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "i",
+      "count"
+    ]
+  },
+  {
+    "Name": "Remap",
+    "Display": "@Remap(x, in0, in1, out0, out1)",
+    "Summary": "Remap x from input range [in0..in1] to output range [out0..out1].",
+    "ArityMin": 5,
+    "ArityMax": 5,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "x",
+      "in0",
+      "in1",
+      "out0",
+      "out1"
+    ]
+  },
+  {
+    "Name": "RepeatIndex",
+    "Display": "@RepeatIndex(i, n)",
+    "Summary": "Repeat index i in the range 1..n (same as 1-based wraparound).",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "i",
+      "n"
+    ]
+  },
+  {
+    "Name": "Replace",
+    "Display": "@Replace(text_value, starting_point, character_count, new_text_value)",
+    "Summary": "Replaces a substring of a text value with some new text. This substring is specified by giving it's starting point and it's length in characters, within the original text value.",
+    "ArityMin": 4,
+    "ArityMax": 4,
+    "ReturnType": "string",
+    "ArgTypes": [
+      "string",
+      "number",
+      "number",
+      "string"
+    ],
+    "ArgNames": [
+      "text_value",
+      "starting_point",
+      "character_count",
+      "new_text_value"
+    ]
+  },
+  {
+    "Name": "Rept",
+    "Display": "@Rept(text_value, repeat_count)",
+    "Summary": "Repeats text a specific number of times.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "string",
+    "ArgTypes": [
+      "string",
+      "number"
+    ],
+    "ArgNames": [
+      "text_value",
+      "repeat_count"
+    ]
+  },
+  {
+    "Name": "Right",
+    "Display": "@Right(text_value, num_chars)",
+    "Summary": "Gets the rightmost characters from a text value, up to the specified number of characters.",
+    "ArityMin": 1,
+    "ArityMax": 2,
+    "ReturnType": "string",
+    "ArgTypes": [
+      "string",
+      "number"
+    ],
+    "ArgNames": [
+      "text_value",
+      "num_chars"
+    ]
+  },
+  {
+    "Name": "Roman",
+    "Display": "@Roman(number, form)",
+    "Summary": "Converts a number into a roman number as a string.",
+    "ArityMin": 1,
+    "ArityMax": 2,
+    "ReturnType": "string",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "number",
+      "form"
+    ]
+  },
+  {
+    "Name": "Rotate",
+    "Display": "@Rotate(p, angDeg)",
+    "Summary": "Rotate a point around the origin in the XY plane. Z is preserved.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Point",
+      "Number"
+    ],
+    "ArgNames": [
+      "p",
+      "angDeg"
+    ]
+  },
+  {
+    "Name": "RotateAbout",
+    "Display": "@RotateAbout(p, center, angDeg)",
+    "Summary": "Rotate a point about a given center in the XY plane. Z is preserved from p.",
+    "ArityMin": 3,
+    "ArityMax": 3,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Point",
+      "Point",
+      "Number"
+    ],
+    "ArgNames": [
+      "p",
+      "center",
+      "angDeg"
+    ]
+  },
+  {
+    "Name": "RotatePoint",
+    "Display": "@RotatePoint(x, y, angleRad)",
+    "Summary": "RotatePoint",
+    "ArityMin": 3,
+    "ArityMax": 3,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "x",
+      "y",
+      "angleRad"
+    ]
+  },
+  {
+    "Name": "RotateX",
+    "Display": "@RotateX(p, angDeg)",
+    "Summary": "Rotate a point around +X axis by angDeg (degrees).",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Point",
+      "Number"
+    ],
+    "ArgNames": [
+      "p",
+      "angDeg"
+    ]
+  },
+  {
+    "Name": "RotateY",
+    "Display": "@RotateY(p, angDeg)",
+    "Summary": "Rotate a point around +Y axis by angDeg (degrees).",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Point",
+      "Number"
+    ],
+    "ArgNames": [
+      "p",
+      "angDeg"
+    ]
+  },
+  {
+    "Name": "RotateZ",
+    "Display": "@RotateZ(p, angDeg)",
+    "Summary": "Rotate a point around +Z axis by angDeg (degrees). Same as 2D Rotate but keeps Z.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Point",
+      "Number"
+    ],
+    "ArgNames": [
+      "p",
+      "angDeg"
+    ]
+  },
+  {
+    "Name": "Round",
+    "Display": "@Round(number, digits)",
+    "Summary": "Rounds a number to down to the specified number of digits.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "number",
+      "digits"
+    ]
+  },
+  {
+    "Name": "RoundDown",
+    "Display": "@RoundDown(number, digits)",
+    "Summary": "Rounds a number to down to the specified number of digits.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "number",
+      "digits"
+    ]
+  },
+  {
+    "Name": "Roundm",
+    "Display": "@Roundm(num, mult, direction)",
+    "Summary": "Rounds a value to the nearest specified multiple",
+    "ArityMin": 3,
+    "ArityMax": 3,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "num",
+      "mult",
+      "direction"
+    ]
+  },
+  {
+    "Name": "RoundUp",
+    "Display": "@RoundUp(number, digits)",
+    "Summary": "Rounds a number to up to the specified number of digits.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "number",
+      "digits"
+    ]
+  },
+  {
+    "Name": "Scale",
+    "Display": "@Scale(p, s)",
+    "Summary": "Scale a point uniformly (X,Y,Z) by a scalar.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Point",
+      "Number"
+    ],
+    "ArgNames": [
+      "p",
+      "s"
+    ]
+  },
+  {
+    "Name": "Search",
+    "Display": "@Search(search_text, value, start_index)",
+    "Summary": "Returns the 1-based index of one string within another, searching case insensitively.",
+    "ArityMin": 2,
+    "ArityMax": 3,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "string",
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "search_text",
+      "value",
+      "start_index"
+    ]
+  },
+  {
+    "Name": "SearchB",
+    "Display": "@SearchB(search_text, value, start_index)",
+    "Summary": "Returns the 1-based index of one string within another, searching case insensitively.",
+    "ArityMin": 0,
+    "ArityMax": 0,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "string",
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "search_text",
+      "value",
+      "start_index"
+    ]
+  },
+  {
+    "Name": "SecondNearestDist",
+    "Display": "@SecondNearestDist(p, seedCount, seed, w, h)",
+    "Summary": "Distance to the second-nearest seed (Worley F2).",
+    "ArityMin": 5,
+    "ArityMax": 5,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Point",
+      "Number",
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "p",
+      "seedCount",
+      "seed",
+      "w",
+      "h"
+    ]
+  },
+  {
+    "Name": "Sentence",
+    "Display": "@Sentence(input)",
+    "Summary": "Sentence",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "String",
+    "ArgTypes": [
+      "String"
+    ],
+    "ArgNames": [
+      "input"
+    ]
+  },
+  {
+    "Name": "SeriesSum",
+    "Display": "@SeriesSum(inputValue, initialPower, step, coefficient1_[,_coefficient2,_coefficient3,_,_coefficientN)",
+    "Summary": "Returns the sum of a power series.",
+    "ArityMin": 4,
+    "ArityMax": 4,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number",
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "inputValue",
+      "initialPower",
+      "step",
+      "coefficient1_[,_coefficient2,_coefficient3,_,_coefficientN"
+    ]
+  },
+  {
+    "Name": "SetEngine",
+    "Display": "@SetEngine(x)",
+    "Summary": "SetEngine",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number"
+    ],
+    "ArgNames": [
+      "x"
+    ]
+  },
+  {
+    "Name": "SierpinskiPoints",
+    "Display": "@SierpinskiPoints(level, size)",
+    "Summary": "Generates translation points for a Sierpinski Tetrahedron at a given recursion level.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "List",
+    "ArgTypes": [
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "level",
+      "size"
+    ]
+  },
+  {
+    "Name": "Sign",
+    "Display": "@Sign(number)",
+    "Summary": "Returns the sign of a number. (-1, 0, or 1)",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "number"
+    ]
+  },
+  {
+    "Name": "Sin",
+    "Display": "@Sin(value)",
+    "Summary": "Calculates the hyperbolic sine of a specified angle measured in radians.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "SinDeg",
+    "Display": "@SinDeg(deg)",
+    "Summary": "Sine of an angle specified in degrees.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number"
+    ],
+    "ArgNames": [
+      "deg"
+    ]
+  },
+  {
+    "Name": "Sinh",
+    "Display": "@Sinh(value)",
+    "Summary": "Calculates the hyperbolic sine of a specified angle measured in radians.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "SmoothStep",
+    "Display": "@SmoothStep(edge0, edge1, x)",
+    "Summary": "Smoothstep easing from 0 to 1 across [edge0..edge1].",
+    "ArityMin": 3,
+    "ArityMax": 3,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "edge0",
+      "edge1",
+      "x"
+    ]
+  },
+  {
+    "Name": "Sqrt",
+    "Display": "@Sqrt(number)",
+    "Summary": "Returns the square root of the specified number.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "number"
+    ]
+  },
+  {
+    "Name": "SqrtPi",
+    "Display": "@SqrtPi(number)",
+    "Summary": "Returns the square root of the specified number times Pi.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "number"
+    ]
+  },
+  {
+    "Name": "StarProfile",
+    "Display": "@StarProfile(points, outerRadius, innerRadius)",
+    "Summary": "Generates a closed point list for a star shape.",
+    "ArityMin": 3,
+    "ArityMax": 3,
+    "ReturnType": "List",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "points",
+      "outerRadius",
+      "innerRadius"
+    ]
+  },
+  {
+    "Name": "StDev",
+    "Display": "@StDev(Value1, value2, valueN)",
+    "Summary": "Calculates an approximate standard deviation of a specified sampling of numeric values.",
+    "ArityMin": 1,
+    "ArityMax": 2147483647,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "Value1",
+      "value2",
+      "valueN"
+    ]
+  },
+  {
+    "Name": "Sum",
+    "Display": "@Sum(value1, value2)",
+    "Summary": "Adds a series of numbers to obtain a total amount.",
+    "ArityMin": 1,
+    "ArityMax": 2147483647,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "value1",
+      "value2"
+    ]
+  },
+  {
+    "Name": "SuperformulaProfile",
+    "Display": "@SuperformulaProfile(m, n1, n2, n3, scale, steps)",
+    "Summary": "Generates a closed point list using the Gielis Superformula for organic and geometric shapes.",
+    "ArityMin": 6,
+    "ArityMax": 6,
+    "ReturnType": "List",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number",
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "m",
+      "n1",
+      "n2",
+      "n3",
+      "scale",
+      "steps"
+    ]
+  },
+  {
+    "Name": "Tan",
+    "Display": "@Tan(value)",
+    "Summary": "Calculates the hyperbolic tangent of a specified angle measured in radians.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "TanDeg",
+    "Display": "@TanDeg(deg)",
+    "Summary": "Tangent of an angle specified in degrees.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Number"
+    ],
+    "ArgNames": [
+      "deg"
+    ]
+  },
+  {
+    "Name": "Tanh",
+    "Display": "@Tanh(value)",
+    "Summary": "Calculates the hyperbolic tangent of a specified angle measured in radians.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "Text",
+    "Display": "@Text(value, format_text)",
+    "Summary": "Converts the value to text based on the specified format.",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "string",
+    "ArgTypes": [
+      "number",
+      "string"
+    ],
+    "ArgNames": [
+      "value",
+      "format_text"
+    ]
+  },
+  {
+    "Name": "TorusKnot",
+    "Display": "@TorusKnot(p, q, radius, tubeRadius, steps)",
+    "Summary": "Generates a 3D point list for a continuous Torus Knot.",
+    "ArityMin": 5,
+    "ArityMax": 5,
+    "ReturnType": "List",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "p",
+      "q",
+      "radius",
+      "tubeRadius",
+      "steps"
+    ]
+  },
+  {
+    "Name": "Translate",
+    "Display": "@Translate(p, dx, dy, dz)",
+    "Summary": "Translate a point by dx, dy, dz. Useful to offset generated patterns.",
+    "ArityMin": 3,
+    "ArityMax": 4,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Point",
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "p",
+      "dx",
+      "dy",
+      "dz"
+    ]
+  },
+  {
+    "Name": "Trim",
+    "Display": "@Trim(text_value)",
+    "Summary": "Removes any leading or trailing spaces from a text value, and normalizes runs of whitespace within a text value.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "string",
+    "ArgTypes": [
+      "string"
+    ],
+    "ArgNames": [
+      "text_value"
+    ]
+  },
+  {
+    "Name": "True",
+    "Display": "@True()",
+    "Summary": "A constant function always returning the TRUE value of Boolean logic.",
+    "ArityMin": 0,
+    "ArityMax": 0,
+    "ReturnType": "bool",
+    "ArgTypes": [],
+    "ArgNames": []
+  },
+  {
+    "Name": "Trunc",
+    "Display": "@Trunc(value, number_of_digits)",
+    "Summary": "Truncates the fractional portion of a numeric value to produce an integer.",
+    "ArityMin": 1,
+    "ArityMax": 2,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "value",
+      "number_of_digits"
+    ]
+  },
+  {
+    "Name": "Type",
+    "Display": "@Type(value)",
+    "Summary": "Returns the underlying UltraCalc data type for the specified value.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number"
+    ],
+    "ArgNames": [
+      "value"
+    ]
+  },
+  {
+    "Name": "Upper",
+    "Display": "@Upper(text_value)",
+    "Summary": "Converts all lowercase letters in a text string to uppercase.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "string",
+    "ArgTypes": [
+      "string"
+    ],
+    "ArgNames": [
+      "text_value"
+    ]
+  },
+  {
+    "Name": "Val",
+    "Display": "@Val(expr)",
+    "Summary": "Val",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "variant"
+    ],
+    "ArgNames": [
+      "expr"
+    ]
+  },
+  {
+    "Name": "Value",
+    "Display": "@Value(text_value)",
+    "Summary": "Retrieves the numeric value of a piece of text that is supposed to represent either a number or a currency.",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "string",
+    "ArgTypes": [
+      "string"
+    ],
+    "ArgNames": [
+      "text_value"
+    ]
+  },
+  {
+    "Name": "Var",
+    "Display": "@Var(Value1, value2, valueN)",
+    "Summary": "Calculates the estimated variance for a specified sampling of numeric values.",
+    "ArityMin": 1,
+    "ArityMax": 2147483647,
+    "ReturnType": "number",
+    "ArgTypes": [
+      "number",
+      "number",
+      "number"
+    ],
+    "ArgNames": [
+      "Value1",
+      "value2",
+      "valueN"
+    ]
+  },
+  {
+    "Name": "Vector",
+    "Display": "@Vector(x, y, z, w)",
+    "Summary": "Creates a vector from x,y,z,w",
+    "ArityMin": 2,
+    "ArityMax": 4,
+    "ReturnType": "Vector",
+    "ArgTypes": [
+      "Number",
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "x",
+      "y",
+      "z",
+      "w"
+    ]
+  },
+  {
+    "Name": "Vector2P",
+    "Display": "@Vector2P(point1, point2)",
+    "Summary": "Creates a Vector from point1, point2",
+    "ArityMin": 2,
+    "ArityMax": 2,
+    "ReturnType": "Vector",
+    "ArgTypes": [
+      "Point",
+      "Point"
+    ],
+    "ArgNames": [
+      "point1",
+      "point2"
+    ]
+  },
+  {
+    "Name": "VectorFromString",
+    "Display": "@VectorFromString(str1)",
+    "Summary": "Creates a Vector from (x,y,z,w)",
+    "ArityMin": 1,
+    "ArityMax": 1,
+    "ReturnType": "Vector",
+    "ArgTypes": [
+      "String"
+    ],
+    "ArgNames": [
+      "str1"
+    ]
+  },
+  {
+    "Name": "VoronoiCellId",
+    "Display": "@VoronoiCellId(p, seedCount, seed, w, h)",
+    "Summary": "Alias of NearestIndex: returns Voronoi cell id for p. Returns 1-based index; returns 0 when seedCount <= 0.",
+    "ArityMin": 5,
+    "ArityMax": 5,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Point",
+      "Number",
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "p",
+      "seedCount",
+      "seed",
+      "w",
+      "h"
+    ]
+  },
+  {
+    "Name": "VoronoiEdgeMetric",
+    "Display": "@VoronoiEdgeMetric(p, seedCount, seed, w, h)",
+    "Summary": "Voronoi border metric: F2 - F1. Small values occur near cell boundaries (useful for line-art panels).",
+    "ArityMin": 5,
+    "ArityMax": 5,
+    "ReturnType": "Number",
+    "ArgTypes": [
+      "Point",
+      "Number",
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "p",
+      "seedCount",
+      "seed",
+      "w",
+      "h"
+    ]
+  },
+  {
+    "Name": "WorleyF1F2",
+    "Display": "@WorleyF1F2(p, seedCount, seed, w, h)",
+    "Summary": "Return Worley distances (F1,F2,0) where F1 is nearest distance and F2 is second-nearest distance.",
+    "ArityMin": 5,
+    "ArityMax": 5,
+    "ReturnType": "Point",
+    "ArgTypes": [
+      "Point",
+      "Number",
+      "Number",
+      "Number",
+      "Number"
+    ],
+    "ArgNames": [
+      "p",
+      "seedCount",
+      "seed",
+      "w",
+      "h"
+    ]
+  }
+]
