@@ -1,0 +1,33 @@
+params spacing=120, height=200
+
+assembly name=LinearSuspension
+    // 1. Array of three inline springs
+    part name=Spring qty=3
+        // Shorthand vector placement using bare expressions inside!
+        .translate = ((($index-1) * $spacing, 0, 0))
+
+        curve name=SpringPath
+            helix radius=30 height=$height turns=6
+        endcurve
+
+        sketch name=WireProfile on=@CurvePlane(springpath)
+            circle mode=cr centre=(0,0) radius=5
+        endsketch
+
+
+        sweep name=Coil profile=#WireProfile Path=#SpringPath solid=true
+    endpart
+
+    // 2. A rigid mounting plate capping the top of the springs
+    part name=TopMount
+        // Translated to sit exactly on top of the springs
+        .translate = ((0, 0, $height))
+        
+        sketch name=PlateBase
+            // Shorthand point syntax for point1
+            rect mode=plw point1=(-40, -40) length=320 width=80
+        endsketch
+        
+        extrude profile=#PlateBase distance=10 mode=add
+    endpart
+endassembly
