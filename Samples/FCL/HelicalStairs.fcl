@@ -1,0 +1,48 @@
+params stair_radius=1200, pole_radius=100
+params step_count=24, step_height=180, step_thk=40
+params total_angle=360
+
+part name=CenterPole
+    cylinder axis=@vector(0,0,1) radius=$pole_radius height=@($step_count * $step_height)
+endpart
+
+part name=Tread qty=$step_count
+    .translate = @vector(0, 0, $index * $step_height)
+    .rz = @($index * ($total_angle / $step_count))
+
+    sketch name=sk_tread
+        rect p1=@point($pole_radius, -150) p2=@point($stair_radius, 150) mode=2p
+    endsketch
+
+    extrude profile=#sk_tread distance=$step_thk mode=add
+endpart
+
+part name=Baluster qty=$step_count
+    .translate = @vector(0, 0, $index * $step_height + $step_thk)
+    .rz = @($index * ($total_angle / $step_count))
+
+    sketch name=sk_baluster
+        circle c=@point($stair_radius - 50, 0) r=20 mode=cr
+    endsketch
+     
+    extrude profile=#sk_baluster distance=900 mode=add
+endpart
+part name=Handrail
+    // Shift the start of the helix up to rest exactly on top of the balusters
+    .translate = @vector(0, 0, $step_thk + 900)
+
+    curve name=RailPath
+        // Radius aligns with the balusters. 
+        // Height covers the total rise of the staircase.
+        // Turns is calculated from the total stair angle (360 / 360 = 1 full turn)
+        helix radius=@($stair_radius - 50) height=@($step_count * $step_height) turns=@($total_angle / 360) handed=right
+    endcurve
+
+    // Use your brilliant new function to snap the profile exactly normal to the helix start!
+    sketch name=sk_handrail on=@CurvePlane(RailPath)
+        // A nice 30mm radius circular handrail
+        circle mode=cr centre=(0,0) radius=30
+    endsketch
+
+    sweep name=RailBody profile=#sk_handrail Path=#RailPath solid=true
+endpart

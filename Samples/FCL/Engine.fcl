@@ -1,0 +1,36 @@
+params bore=85, stroke=110, cylinder_count=7
+params crankcase_radius=160, crankcase_thk=120
+params cooling_fin_qty=15, fin_spacing=6
+
+// 1. The Central Hub
+part name=Crankcase
+    .translate = @vector(0, 0, -60)
+    // Omitted 'axis' to let it natively build on Z
+    cylinder radius=$crankcase_radius height=$crankcase_thk
+endpart
+
+// 2. The Radial Assembly Array
+  // Orbit the arm around the Z-axis
+  assembly name=RadialArm qty=$cylinder_count
+    .rz = @($index * (360 / $cylinder_count))
+
+    // 3. Engine Cylinder
+     // A. Tip it over FIRST (rotates around 0,0,0)
+         // B. Slide it outward SECOND
+       part name=EngineCylinder
+        .ry = 90
+       .translate = @vector($crankcase_radius, 0, 0)
+        
+        cylinder radius=@($bore / 2 + 15) height=$stroke
+    endpart
+
+    // 4. Cooling Fins
+      // A. Tip it over FIRST
+           // B. Slide it outward SECOND, adding the $index spacing
+      part name=CoolingFins qty=$cooling_fin_qty
+     .ry = 90
+        .translate = @vector($crankcase_radius + 10 + ($index * $fin_spacing), 0, 0)
+        
+        cylinder radius=@($bore / 2 + 25) height=2
+    endpart
+endassembly

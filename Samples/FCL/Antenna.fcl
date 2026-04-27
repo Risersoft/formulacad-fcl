@@ -1,0 +1,18 @@
+params base_rad=50, tube_height=200
+
+assembly name=TelescopingAntenna
+    
+    // Using newdef=true forces the engine to recalculate the radius for EVERY instance!
+    part name=TubeSegment qty=5 newdef=true
+        // Stack them end-to-end
+        .translate = ((0, 0, ($index - 1) * $tube_height))
+        
+        // Calculate a shrinking radius: Base radius minus 8mm for every step up
+        // Notice the strict top-level @(...) evaluation!
+        params current_rad=@($base_rad - (($index - 1) * 8))
+        
+        // Generate the cylinder using the dynamically calculated parameter
+        cylinder radius=$current_rad height=$tube_height
+    endpart
+
+endassembly

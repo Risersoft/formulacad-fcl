@@ -1,0 +1,32 @@
+params fin_qty=8, fin_thickness=5
+
+// 1. The Revolved Core Hub (Unchanged)
+part name=ImpellerHub
+    sketch name=HubProfile
+        line mode=2p point1=@point(0,0) point2=@point(60,0)
+        line mode=2p point1=@point(60,0) point2=@point(40,50)
+        line mode=2p point1=@point(40,50) point2=@point(15,100)
+        line mode=2p point1=@point(15,100) point2=@point(0,100)
+        line mode=2p point1=@point(0,100) point2=@point(0,0)
+    endsketch
+    
+    revolve mode=add angle=360 axis=@vector(0,1,0) profile=HubProfile
+endpart
+
+// 2. The Swept Compressor Fins
+assembly name=ImpellerFins qty=$fin_qty
+    .ry = @($index * (360 / $fin_qty))
+    
+    part name=Fin
+        sketch name=FinProfile
+            // Using a single closed polyline with arc bulges!
+            // Point 1 to 2: Bulge 0.3 (Sweeping aerodynamic curve)
+            // Point 2 to 3: Bulge 0.0 (Straight tip)
+            // Point 3 to 4: Bulge 0.2 (Slight inner curve)
+            // Point 4 to 1: Bulge 0.0 (Straight root attaching to hub)
+            pline closed=true pointlist=@list(@point(15,100), @point(90,10), @point(60,0), @point(40,50)) bulgelist=@list(0.3, 0.0, 0.2, 0.0)
+        endsketch
+        
+        extrude distance=$fin_thickness profile=FinProfile mode=add
+    endpart
+endassembly

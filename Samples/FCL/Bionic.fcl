@@ -1,0 +1,28 @@
+params w=400, h=200, thk=5
+params pitch=40
+params cols=@($w / $pitch)
+params rows=@($h / $pitch)
+params hole_qty=@($cols * $rows)
+params seed_cnt=15, seed=77
+
+part name=BionicPlate
+    sketch name=PlateSk
+        rect name=Outer mode=plw point1=(0,0) length=$w width=$h
+        // 50 dynamically sized cutouts!
+            // 1. Center the hole in its grid cell
+            // 2. Drive the radius using the Voronoi Edge Metric!
+            // Deep inside cell = large radius (up to 4.2). Near edge = tiny radius (0.3).
+        circle name=Pores mode=cr qty=$hole_qty
+            centre=@Translate(@GridXY($index, $cols, $pitch), $pitch/2, $pitch/2, 0)
+            radius=@Clamp(
+                @VoronoiEdgeMetric(
+                    @Translate(@GridXY($index, $cols, $pitch), $pitch/2, $pitch/2, 0),
+                    $seed_cnt, $seed, $w, $h
+                ) * 0.22,
+                0.3,
+                4.2
+            )
+    endsketch
+
+    extrude profile=#PlateSk distance=$thk mode=add
+endpart

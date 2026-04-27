@@ -1,0 +1,96 @@
+// Heavy Duty Angle Bracket Assembly
+// Method: Build un-rotated along Z-axis, then rotate the sub-assembly into final position.
+
+params L=300
+
+// Master Sub-Assembly container
+assembly name=BracketSubAsm
+    // rx=-90, ry=-90, and rz=180 sweeps the 150mm leg UP (+Z) and the 75mm leg OUT (+Y).
+    // It extrudes along +X. 
+    .rx = -90
+    .ry = -90
+    .rz = 180
+    .translate = (( 0, $L/2, 75 ))
+
+    // =========================================================================
+    // 1. Outer Angle (Extrudes Z)
+    // =========================================================================
+    child name=OuterBracket key="IS.UA150x75x10" span=$L
+
+    // =========================================================================
+    // 2. Inner Angles (Extrudes Z)
+    // =========================================================================
+    // A shift of (-40, 15) perfectly aligns the EA50x50 heel into the UA150x75 corner.
+    child name=InnerBracket key="IS.EA50x50x6" span=40 qty=2
+        .translate = (( -40, 15, @choose($index, 40, 220) ))
+
+    // =========================================================================
+    // 3. Fasteners Top (On the 150mm X-leg)
+    // =========================================================================
+    // Inner face of the EA bracket is now at Y=59. 
+    // .rx=90 points the extrusion into the empty space (-Y).
+    assembly name=FastenersTop qty=2
+        .rx = 90
+        .translate = (( -40, 59, @choose($index, 60, 240) ))
+
+        part name=Washer
+            sketch name=sk
+                circle c=(0,0) r=12 mode=cr
+                circle c=(0,0) r=6.5 mode=cr
+            endsketch
+            extrude profile=#sk distance=2 mode=add
+        endpart
+
+        part name=Bolt
+            .translate = (( 0, 0, 2 ))
+            sketch name=sk
+                circle c=(0,0) r=8 mode=cr
+            endsketch
+            extrude profile=#sk distance=5 mode=add
+        endpart
+
+        part name=Pin
+            .translate = (( 0, 0, 7 ))
+            sketch name=sk
+                circle c=(0,0) r=6 mode=cr
+            endsketch
+            extrude profile=#sk distance=3 mode=add
+        endpart
+    endassembly
+
+    // =========================================================================
+    // 4. Fasteners Bottom (On the 75mm Y-leg)
+    // =========================================================================
+    // Inner face of the EA bracket is at X=-59.
+    // The center of the vertical EA leg is now at Y=40.
+    // .ry=90 points the extrusion into the empty space (+X).
+    assembly name=FastenersBot qty=2
+        .ry = 90
+        .translate = (( -59, 40, @choose($index, 60, 240) ))
+
+        part name=Washer
+            sketch name=sk
+                circle c=(0,0) r=12 mode=cr
+                circle c=(0,0) r=6.5 mode=cr
+            endsketch
+            extrude profile=#sk distance=2 mode=add
+        endpart
+
+        part name=Bolt
+            .translate = (( 0, 0, 2 ))
+            sketch name=sk
+                circle c=(0,0) r=8 mode=cr
+            endsketch
+            extrude profile=#sk distance=5 mode=add
+        endpart
+
+        part name=Pin
+            .translate = (( 0, 0, 7 ))
+            sketch name=sk
+                circle c=(0,0) r=6 mode=cr
+            endsketch
+            extrude profile=#sk distance=3 mode=add
+        endpart
+    endassembly
+
+endassembly

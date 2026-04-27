@@ -1,0 +1,85 @@
+params wheel_rad=320, wheel_thk=40, wheelbase=1050
+params frame_thk=35, bar_width=400
+params bb_x=400, bb_y=-50
+
+assembly name=TrackBike
+    // Stand the entire bike upright for the final render
+    .rx = 90
+    
+    // 1. REAR WHEEL
+    part name=RearWheel
+        sketch name=WheelSk
+            circle name=Outer centre=(0,0) radius=$wheel_rad mode=cr
+            circle name=Hub centre=(0,0) radius=25 mode=cr
+            circle name=Cut centre=(170 * @cosDeg(($index-1)*120), 170 * @sinDeg(($index-1)*120)) radius=120 qty=3 mode=cr
+        endsketch
+        extrude profile=#WheelSk distance=$wheel_thk mode=add
+    endpart
+
+    // 2. FRONT WHEEL
+    part name=FrontWheel
+        .translate = (($wheelbase, 0, 0))
+        sketch name=WheelSk
+            circle name=Outer centre=(0,0) radius=$wheel_rad mode=cr
+            circle name=Hub centre=(0,0) radius=25 mode=cr
+            // Offset the front wheel spokes by 60 degrees
+            circle name=Cut centre=(170 * @cosDeg(($index-1)*120 + 60), 170 * @sinDeg(($index-1)*120 + 60)) radius=120 qty=3 mode=cr
+        endsketch
+        extrude profile=#WheelSk distance=$wheel_thk mode=add
+    endpart
+
+    // 3. TRUE AERO FRAME (Hollowed Truss)
+    part name=Frame
+        .translate = ((0, 0, ($wheel_thk - $frame_thk) / 2))
+
+        sketch name=FrameSk
+            // Outer Frame Silhouette
+            pline name=Outer closed=true pointlist=[(0, 0), ($bb_x, $bb_y), (850, 400), (800, 650), (350, 650)] bulgelist=[0, -0.05, 0, 0, 0]
+            
+            // Front Triangle Cutout (Clockwise for winding)
+            pline name=FrontCut closed=true pointlist=[(420, 50), (380, 580), (740, 580), (780, 400)] 
+
+            // Rear Triangle Cutout (Clockwise for winding)
+            pline name=RearCut closed=true pointlist=[(80, 20), (340, 580), (380, -10)] 
+        endsketch
+         
+        extrude profile=#FrameSk distance=$frame_thk mode=add
+    endpart
+    
+    // 4. CRANKSET
+    part name=Crankset
+        .translate = (($bb_x, $bb_y, $wheel_thk))
+        sketch name=SprocketSk
+            circle name=SpOuter centre=(0,0) radius=95 mode=cr
+            circle name=SpHub centre=(0,0) radius=15 mode=cr
+            circle name=SpHole centre=(55 * @cosDeg(($index-1)*72), 55 * @sinDeg(($index-1)*72)) radius=25 qty=5 mode=cr
+        endsketch
+        extrude profile=#SprocketSk distance=10 mode=add
+    endpart
+
+    // 5. AERO SADDLE
+    part name=Saddle
+        .translate = ((330, 650, ($wheel_thk - 40) / 2))
+        sketch name=SeatSk
+            pline closed=true pointlist=[(-80, 0), (100, 0), (100, 20), (-80, 20)] bulgelist=[0, 0.5, 0, 0.2]
+        endsketch
+        extrude profile=#SeatSk distance=40 mode=add
+    endpart
+
+    // 6. STRAIGHT TRACK HANDLEBARS
+    part name=Handlebar
+        .translate = ((800, 650, ($wheel_thk / 2) - ($bar_width / 2)))
+        cylinder radius=15 height=$bar_width
+    endpart
+
+    // 7. FRONT FORK (Dual Blades)
+    part name=Fork qty=2
+        // Calculates Z translation for Left and Right fork blades
+        .translate = ((0, 0, ($index - 1) * 45 - 10))
+        sketch name=ForkSk
+            pline closed=true pointlist=[(800, 650), (850, 400), ($wheelbase + 25, 0), ($wheelbase - 25, 0), (790, 400), (740, 650)]
+        endsketch
+        extrude profile=#ForkSk distance=15 mode=add
+    endpart
+
+endassembly

@@ -1,0 +1,57 @@
+params barrel_radius=40, barrel_length=800
+params coil_qty=12, coil_spacing=50
+params hub_radius=150, hub_length=200
+params dish_radius=300, dish_height=100
+params arm_qty=6
+
+// 1. Hub (Builds Z: 0 to 200)
+part name=ReactorHub
+    cylinder radius=$hub_radius height=$hub_length
+endpart
+
+// 2. CommRing (Flat on XY plane, shifted up Z to middle of hub)
+part name=CommRing
+    .translate = @vector(0, 0, 100)
+    torus innerRadius=15 outerRadius=170
+endpart
+
+// 3. Barrel (Builds Z: 200 to 1000)
+part name=Barrel
+    .translate = @vector(0, 0, 200)
+    cylinder radius=$barrel_radius height=$barrel_length
+endpart
+
+// 4. MagCoils (Stacked perfectly up the barrel)
+part name=MagCoils qty=$coil_qty
+    .translate = @vector(0, 0, 250 + ($index * $coil_spacing))
+    torus innerRadius=12 outerRadius=55
+endpart
+
+// 5. Deflector Dish (Swallows the tip of the barrel)
+part name=DeflectorDish
+    .translate = @vector(0, 0, 950)
+    cone radius=$dish_radius height=$dish_height
+endpart
+
+// 6. Solar Arrays (Orbiting the global Z axis)
+assembly name=SolarArrays qty=$arm_qty
+    .rz = @($index * (360 / $arm_qty))
+
+    part name=Strut
+        // Rotate Z-cylinder to lay flat on the X-axis, THEN push it out and up
+        .ry = 90
+        .translate = @vector(150, 0, 100)
+        cylinder radius=10 height=200
+    endpart
+
+    part name=PanelLeft
+        // Box shifted outward along X, offset in Y to flank the strut
+        .translate = @vector(170, 10, -25)
+        box length=150 width=10 height=250
+    endpart
+
+    part name=PanelRight
+        .translate = @vector(170, -20, -25)
+        box length=150 width=10 height=250
+    endpart
+endassembly

@@ -1,0 +1,50 @@
+params module=2, pa=20, gear_thk=15
+params sun_t=12, planet_t=12, ring_t=36
+params planet_qty=4
+
+params sun_r=@($module * $sun_t / 2)
+params planet_r=@($module * $planet_t / 2)
+params ring_r=@($module * $ring_t / 2)
+
+assembly name=PlanetaryGearbox
+
+    // 1. SUN GEAR (Center)
+    part name=SunGear
+        sketch name=SunSk
+            pline name=Teeth closed=true pointlist=@GearProfile($sun_t, $module, $pa, false)
+            circle name=Shaft mode=cr centre=(0,0) radius=6
+        endsketch
+        extrude profile=#SunSk distance=$gear_thk mode=add
+    endpart
+
+    // 2. PLANET GEARS (Arrayed using a Carrier Assembly)
+    // Wrapping this in an assembly gives us an "invisible arm" to rotate safely!
+    assembly name=PlanetCarrier qty=$planet_qty
+        // Orbit the arm around the global Z-axis
+        .rz = @(($index - 1) * (360 / $planet_qty))
+        
+        part name=PlanetGear
+            // Slide the gear out to the end of the rotated arm
+            .translate = (($sun_r + $planet_r, 0, 0))
+            
+            // Locally rotate the planet half a tooth so it perfectly meshes with the sun!
+            .rz = @(180 / $planet_t)
+            
+            sketch name=PlanetSk
+                pline name=Teeth closed=true pointlist=@GearProfile($planet_t, $module, $pa, false)
+                circle name=Pin mode=cr centre=(0,0) radius=4
+            endsketch
+            extrude profile=#PlanetSk distance=$gear_thk mode=add
+        endpart
+    endassembly
+
+    // 3. RING GEAR (Outer casing)
+    part name=RingGear
+        sketch name=RingSk
+            circle name=Outer mode=cr centre=(0,0) radius=@($ring_r + 15)
+            pline name=InnerTeeth closed=true pointlist=@GearProfile($ring_t, $module, $pa, true)
+        endsketch
+        extrude profile=#RingSk distance=$gear_thk mode=add
+    endpart
+
+endassembly

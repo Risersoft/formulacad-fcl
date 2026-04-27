@@ -1,0 +1,45 @@
+﻿params plate_len=500, plate_wid=350, plate_thk=20
+params hole_edge=50, hole_r=12
+
+params col_h=500, beamProfile="EN.IPE200"
+params beam_wid = @libparam($beamProfile,"h")
+
+params gus_len=160, gus_ht=140, gus_thk=12
+params gus_off=40
+
+
+part name=BasePlate
+    sketch name=base
+        rect p1=(0,0) p2=($plate_len,$plate_wid) mode=2p
+
+        circle c=($hole_edge, $hole_edge) r=$hole_r mode=cr
+        circle c=($plate_len - $hole_edge, $hole_edge) r=$hole_r mode=cr
+        circle c=($hole_edge, $plate_wid - $hole_edge) r=$hole_r mode=cr
+        circle c=($plate_len - $hole_edge, $plate_wid - $hole_edge) r=$hole_r mode=cr
+    endsketch
+
+    extrude profile=#base distance=$plate_thk mode=add
+endpart
+
+
+child name=Column key=$beamProfile
+    span=$col_h
+    .translate = (($plate_len / 2, $plate_wid / 2-$beam_wid/2, $plate_thk))
+
+
+part name=Gusset qty=2
+    .rx = 90
+    .translate = @choose(
+        $index,
+        @vector($plate_len / 2, $plate_wid / 2 + $gus_off, $plate_thk),
+        @vector($plate_len / 2, $plate_wid / 2 - $gus_off, $plate_thk)
+    )
+
+    sketch name=gus
+        line p1=(0,0) p2=(0,$gus_ht) mode=2p
+        line p1=(0,$gus_ht) p2=($gus_len,0) mode=2p
+        line p1=($gus_len,0) p2=(0,0) mode=2p
+    endsketch
+
+    extrude profile=#gus distance=$gus_thk mode=add
+endpart

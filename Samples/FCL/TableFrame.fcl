@@ -1,0 +1,59 @@
+// Table Frame Assembly FCL
+// Assembly Coordinates: Z-UP (X=Long, Y=Trans, Z=Height)
+
+assembly name=TableFrame
+
+    // --- Core & Derived Parameters ---
+    params L=1200, W=800, H=800, leg=50
+    
+    // Inner spans
+    params dx = @($L - 2*$leg)
+    params dy = @($W - 2*$leg)
+    
+    // Placement centers
+    params px = @($L/2 - $leg/2)
+    params py = @($W/2 - $leg/2)
+    params z_top = @($H - $leg/2)
+    params z_bot = 75
+    
+    // Diagonal Brace Math (kept as params for readability)
+    params dz_brace = @($H - $leg - $z_bot) 
+    params d_len = @Sqrt($dx*$dx + $dz_brace*$dz_brace)
+    params d_ang = @AtanDeg($dz_brace / $dx) 
+
+    // ==========================================
+    // 1. Legs (qty=4) 
+    // $index map -> 1:FL, 2:FR, 3:BL, 4:BR
+    // ==========================================
+    child name=Legs key="IS.MSSHS50X50" span=$H qty=4
+        .translate = (( @choose($index, -$px, $px, -$px, $px), @choose($index, $py, $py, -$py, -$py), 0 ))
+
+    // ==========================================
+    // 2. Long Top Rails (qty=2) 
+    // $index map -> 1:Front, 2:Back
+    // ==========================================
+    child name=TopLong key="IS.MSSHS50X50" span=$dx qty=2
+        .ry = 90
+        .translate = (( -$dx/2, @choose($index, $py, -$py), $z_top ))
+
+    // ==========================================
+    // 3. Short Rails (qty=2 Top, qty=2 Bottom) 
+    // $index map -> 1:Left, 2:Right
+    // ==========================================
+    child name=TopShort key="IS.MSSHS50X50" span=$dy qty=2
+        .rx = 270
+        .translate = (( @choose($index, -$px, $px), -$dy/2, $z_top ))
+
+    child name=BotShort key="IS.MSSHS50X50" span=$dy qty=2
+        .rx = 270
+        .translate = (( @choose($index, -$px, $px), -$dy/2, $z_bot ))
+
+    // ==========================================
+    // 4. X-Bracing (qty=4) 
+    // $index map -> 1:FrontAsc, 2:FrontDesc, 3:BackAsc, 4:BackDesc
+    // ==========================================
+    child name=Braces key="IS.MSPIPE25L" span=$d_len qty=4
+        .ry = @choose($index, 90-$d_ang, -90+$d_ang, 90-$d_ang, -90+$d_ang)
+        .translate = (( @choose($index, -$dx/2, $dx/2, -$dx/2, $dx/2), @choose($index, $py, $py, -$py, -$py), $z_bot ))
+
+endassembly

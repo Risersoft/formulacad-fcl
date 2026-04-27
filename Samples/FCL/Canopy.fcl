@@ -1,0 +1,48 @@
+﻿params length = 1200, width = 800
+params beam_count = 10, purlin_count = 25
+params wave_height = 150
+params wave_cycles = 1.5
+
+assembly name=SineCanopy
+    // 1. THE MAIN BEAMS (Swept perfectly along a sine wave path)
+   // Added newdef=true so $y_pos recalculates per instance!
+    part name=MainBeam qty=$beam_count newdef=true
+        params y_pos = @( ($index - 1) * ($width / ($beam_count - 1)) - ($width / 2) )
+        .translate = ((0, $y_pos, 0))
+
+        curve name=WavePath
+            spline pointlist=[
+                (0, 0, 0),
+                ($length * 0.25, 0, @SinDeg(0.25 * $wave_cycles * 360) * $wave_height),
+                ($length * 0.50, 0, @SinDeg(0.50 * $wave_cycles * 360) * $wave_height),
+                ($length * 0.75, 0, @SinDeg(0.75 * $wave_cycles * 360) * $wave_height),
+                ($length, 0, @SinDeg(1.0 * $wave_cycles * 360) * $wave_height)
+            ]
+        endcurve
+
+        sketch name=BeamProfile on=@CurvePlane(#WavePath)
+            rect mode=plw point1=(-10, -20) length=20 width=40
+        endsketch
+
+        sweep name=BeamSolid profile=#BeamProfile path=#WavePath solid=true
+    endpart
+
+    // 2. THE DECKING PURLINS (Arrayed and positioned using the same math)
+    part name=Purlin qty=$purlin_count newdef=true
+        params x_pos = @( ($index - 1) * ($length / ($purlin_count - 1)) )
+        
+        // We reuse the exact Sine wave logic to calculate the dynamic Z resting height
+        params z_pos = @( @SinDeg(($x_pos / $length) * $wave_cycles * 360) * $wave_height )
+
+        // Add 20mm to Z so the decking sits exactly on top of the 40mm deep beams
+        .translate = (($x_pos, 0, $z_pos + 20))
+
+        sketch name=PurlinSk
+            // Drawn flat across the Y-axis to span all the beams
+            rect mode=plw point1=(-15, -$width/2) length=30 width=$width
+        endsketch
+
+        extrude profile=#PurlinSk distance=15 mode=add
+    endpart
+
+endassembly

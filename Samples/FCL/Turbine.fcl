@@ -1,0 +1,25 @@
+params blade_count=24, hub_radius=100, hub_thk=30
+params span=120, chord=40, thk=4, pitch_angle=30
+
+// 1. The Central Turbine Hub
+part name=Hub
+    // Adding the 'axis' parameter back in case the parser strictly requires it
+    cylinder axis=@vector(0,0,1) radius=$hub_radius height=$hub_thk
+endpart
+
+// 2. The Rotor Array
+  // Orbit the assembly around the hub
+  assembly name=Rotor qty=$blade_count
+    .rz = @($index * (360 / $blade_count))
+
+    // 3. The Turbine Blade
+       // A. Twist the blade around the X-axis FIRST to create the fan pitch
+      // B. Translate SECOND to push it out of the hub
+        part name=Blade
+       .rx = $pitch_angle
+      .translate = @vector($hub_radius - 5, 0, $hub_thk / 2)
+        
+        // C. Box mapped correctly: Span goes outward (X), Chord goes sideways (Y)
+        box axis=@vector(0,0,1) length=$span width=$chord height=$thk
+    endpart
+endassembly

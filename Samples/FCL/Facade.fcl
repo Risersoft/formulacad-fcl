@@ -1,0 +1,139 @@
+params cols=14, rows=9
+params panel_w=220, panel_h=320
+params gap_x=18, gap_y=18
+
+params base_thk=16, thk_var=54
+params bow_depth=320, tilt_max=28
+params jitter_xy=16
+
+params macro_scale=2600, detail_scale=580
+params macro_seed=41, detail_seed=89, hole_seed=113
+
+assembly name=OrganicFacadeHeroV5
+    .rx = 90
+
+    assembly name=FacadeRow qty=$rows
+        .translate = ((0, (($index-1) * ($panel_h + $gap_y)), 0))
+
+        params row_i=@($index-1), row_y=@($row_i * ($panel_h + $gap_y))
+
+        part name=FacadePanel qty=$cols newdef=true
+            params col_i=@($index-1)
+            params px=@($col_i * ($panel_w + $gap_x)), py=$row_y
+
+            // Spatial fields
+            params macro=@Noise2(@point($px / $macro_scale, $py / $macro_scale, 0), $macro_seed)
+            params detail=@Noise2(@point($px / $detail_scale, $py / $detail_scale, 0), $detail_seed)
+            params ang=@NoiseAngleDeg(@point($px / $macro_scale, $py / $macro_scale, 0), $macro_seed)
+
+            // Hard region logic
+            params dense=@Clamp((0.36 - $macro) / 0.36, 0, 1)
+            params open=@Clamp((0.68 - $macro) / 0.24, 0, 1)
+            params solid=@Clamp(($macro - 0.72) / 0.28, 0, 1)
+
+            // Family dimensions
+            params tall_w=@Lerp($panel_w * 0.08, $panel_w * 0.15, $detail)
+            params tall_h=@Lerp($panel_h * 0.42, $panel_h * 0.72, $detail)
+
+            params wide_w=@Lerp($panel_w * 0.30, $panel_w * 0.72, $detail)
+            params wide_h=@Lerp($panel_h * 0.08, $panel_h * 0.18, $detail)
+
+            params core_w=@Lerp($panel_w * 0.14, $panel_w * 0.24, $detail)
+            params core_h=@Lerp($panel_h * 0.14, $panel_h * 0.24, $detail)
+
+            // Hard pick: left-ish = tall, middle-ish = wide, right-ish = compact/solid
+            params useTall=$dense
+            params useWide=@Clamp($open - $dense, 0, 1)
+            params useCore=@Clamp(1 - $useTall - $useWide, 0, 1)
+
+            params raw_w=@($useTall * $tall_w + $useWide * $wide_w + $useCore * $core_w)
+            params raw_h=@($useTall * $tall_h + $useWide * $wide_h + $useCore * $core_h)
+
+            // Kill openings in solid regions
+            params main_w=@($raw_w * (1 - $solid))
+            params main_h=@($raw_h * (1 - $solid))
+
+            // Strong off-center placement
+            params offx=@(($macro - 0.5) * $panel_w * 0.42)
+            params offy=@(($detail - 0.5) * $panel_h * 0.34)
+
+            params cx=@($panel_w * 0.5 + $offx)
+            params cy=@($panel_h * 0.5 + $offy)
+
+            // Strong body shaping
+            params thick=@($base_thk + $thk_var * $detail)
+            params bow=@((($macro - 0.5) * 2) * $bow_depth)
+            params tilt=@((($macro - 0.5) * 1.6) * $tilt_max)
+
+            // Break the grid
+            params shift_x=@((@Hash01($col_i + $row_i * 31, $hole_seed + 201) - 0.5) * 2 * $jitter_xy)
+            params shift_y=@((@Hash01($col_i + $row_i * 47, $hole_seed + 202) - 0.5) * 2 * $jitter_xy)
+
+            // Skew for stronger directional effect
+            params skew=@(($macro - 0.5) * 95)
+
+            .translate = (((($index-1) * ($panel_w + $gap_x)) + $shift_x, $shift_y, $bow))
+            .ry = @($tilt + (($col_i - ($cols / 2)) * 1.4))
+            .rz = @(($ang - 180) * 0.38)
+
+            sketch name=PanelSketch
+                rect
+                    mode=plw
+                    point1=(0,0)
+                    length=$panel_w
+                    width=$panel_h
+
+                // Main opening: off-center and region-dependent
+                rect
+                    mode=plw
+                    point1=@Jitter(
+                        @point($cx - $main_w / 2 + $skew, $cy - $main_h / 2, 0),
+                        $panel_w * 0.012,
+                        $col_i + $row_i * 101,
+                        $hole_seed
+                    )
+                    length=$main_w
+                    width=$main_h
+
+                // Directional satellites
+                circle
+                    mode=cr
+                    centre=@Jitter(
+                        @point(
+                            $cx + @CosDeg($ang + $index * 60) * @Lerp($panel_w * 0.10, $panel_w * 0.28, $detail),
+                            $cy + @SinDeg($ang + $index * 60) * @Lerp($panel_h * 0.10, $panel_h * 0.28, $detail),
+                            0
+                        ),
+                        $panel_w * 0.018,
+                        $col_i * 17 + $row_i * 19 + $index,
+                        $hole_seed + 10
+                    )
+                    radius=@(@Lerp($panel_w * 0.014, $panel_w * 0.08, $detail) * (1 - $solid))
+                    qty=@(2 + $detail * 3)
+
+                // Dense pore field only in dense regions
+                circle
+                    mode=cr
+                    centre=@Jitter(
+                        @point(
+                            24 + (($index-1) * (($panel_w - 48) / 5)),
+                            @Lerp($panel_h * 0.10, $panel_h * 0.90, @Hash01($index + $col_i * 7 + $row_i * 13, $hole_seed + 30)),
+                            0
+                        ),
+                        $panel_w * 0.008,
+                        $index + $col_i * 11 + $row_i * 5,
+                        $hole_seed + 40
+                    )
+                    radius=@Lerp($panel_w * 0.006, $panel_w * 0.018, $detail)
+                    qty=@($dense * 10)
+
+            endsketch
+
+            extrude
+                profile=#PanelSketch
+                distance=$thick
+                mode=add
+        endpart
+    endassembly
+
+endassembly

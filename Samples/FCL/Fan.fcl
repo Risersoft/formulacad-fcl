@@ -1,0 +1,54 @@
+params blade_qty=9, stator_qty=5
+
+// 1. The Outer Aerodynamic Duct
+part name=Duct
+    sketch name=DuctProfile
+        pline closed=true pointlist=@list(@point(140,-20), @point(160,-20), @point(165,40), @point(155,100), @point(145,100), @point(135,40)) bulgelist=@list(0, 0.1, 0.2, 0, 0.1, 0.1)
+    endsketch
+    revolve mode=add angle=360 axis=@vector(0,1,0) profile=DuctProfile
+endpart
+
+// 2. The Inner Motor Hub (With Boolean Subtract)
+part name=MotorHub
+    // BREP 1: The Main Solid Body
+    sketch name=HubProfile
+        pline closed=true pointlist=@list(@point(0,-20), @point(40,-20), @point(40,60), @point(0,80)) bulgelist=@list(0, 0, 0.2, 0)
+    endsketch
+    revolve name=MainBody mode=add angle=360 axis=@vector(0,1,0) profile=HubProfile
+    
+    // BREP 2: The Cutting Tool 
+    // (A 15mm wide, 120mm tall rectangle starting below the hub)
+    sketch name=CutProfile
+        rect mode=plw point1=@point(0,-30) length=15 width=120
+    endsketch
+    revolve name=Cutter mode=add angle=360 axis=@vector(0,1,0) profile=CutProfile
+    
+    // Execute the Boolean Subtraction between the two local BREPs
+    subtract part1=MainBody part2=Cutter
+endpart
+
+// 3. The Static Guide Vanes
+assembly name=Stators qty=$stator_qty
+    .ry = @($index * (360 / $stator_qty))
+    
+    part name=Stator
+        .translate = @vector(0, 60, -2)
+        sketch name=StatorProfile
+            pline closed=true pointlist=@list(@point(40,0), @point(140,-10), @point(140,10)) bulgelist=@list(0, 0, 0)
+        endsketch
+        extrude distance=4 profile=StatorProfile mode=add
+    endpart
+endassembly
+
+// 4. The Swept Rotor Blades
+assembly name=Rotors qty=$blade_qty
+    .ry = @($index * (360 / $blade_qty))
+    
+    part name=Blade
+        .translate = @vector(0, 10, -5)
+        sketch name=BladeProfile
+            pline closed=true pointlist=@list(@point(38,0), @point(138,-30), @point(135,20), @point(45,30)) bulgelist=@list(0.1, 0.3, 0.1, -0.2)
+        endsketch
+        extrude distance=10 profile=BladeProfile mode=add
+    endpart
+endassembly

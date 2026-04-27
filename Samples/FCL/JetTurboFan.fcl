@@ -1,0 +1,50 @@
+params blade_qty=24, hub_rad=70, blade_span=160
+params chord_len=45, angle_of_attack=40
+
+    
+// 1. The Nose Spinner
+assembly name=Spinner
+    part name=ConeBody
+        cone radius=$hub_rad topradius=20 height=100
+    endpart
+        
+    part name=NoseCap
+        .translate = ((0, 0, 100))
+        sphere Radius=20  height=15
+    endpart
+endassembly
+
+// 2. The Swept NACA Blades
+assembly name=RotorBank qty=$blade_qty
+    // Orbit the carrier arm around the Z-axis
+    .rz = @(($index - 1) * (360 / $blade_qty))
+
+    part name=TitaniumBlade
+        // ROTATE FIRST (Orient the airfoil at the origin)
+        .rz = 90               // Align the chord tangentially (along Y axis)
+        .ry = 90               // Lay it down so the span points radially (along X axis)
+        .rx = $angle_of_attack // Pitch the blade for airflow (twist around the new span axis)
+            
+        // TRANSLATE SECOND (Slide the oriented blade out and up)
+        .translate = (($hub_rad - 2, 0, 30))
+
+        sketch name=AirfoilSk
+            pline name=Wing closed=true pointlist=@NACAProfile("4412", $chord_len)
+        endsketch
+            
+        extrude profile=#AirfoilSk distance=$blade_span mode=add
+    endpart
+endassembly
+
+// 3. The Outer Engine Cowling (Shroud)
+part name=OuterShroud
+    .translate = ((0, 0, -20))
+        
+    sketch name=ShroudSk
+        circle name=Outer mode=cr centre=(0,0) radius=@($hub_rad + $blade_span + 12)
+        circle name=Inner mode=cr centre=(0,0) radius=@($hub_rad + $blade_span + 2)
+    endsketch
+        
+    extrude profile=#ShroudSk distance=100 mode=add
+endpart
+

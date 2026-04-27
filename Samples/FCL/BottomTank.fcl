@@ -1,0 +1,110 @@
+params tankLength=3000, tankWidth=1200, tankHeight=900
+params shellThk=6, bottomThk=8
+params flangeWidth=75, flangeThk=6
+params hangerPadLen=120, hangerPadWid=60, hangerPadThk=10
+params hangerInsetX=350
+
+part name=TankBottom
+    sketch name=skBottom
+        rect p1=@point(0,0) p2=@point($tankLength,$tankWidth) mode=2p
+    endsketch
+
+    extrude profile=#skBottom distance=$bottomThk mode=add
+endpart
+
+part name=Wall_LV
+    .rx = 90
+    .translate = @vector(0,0,$bottomThk)
+
+    sketch name=skWallLV
+        rect p1=@point(0,0) p2=@point($tankLength,$tankHeight) mode=2p
+    endsketch 
+
+    extrude profile=#skWallLV distance=$shellThk  mode=add
+endpart
+
+part name=Wall_HV
+    .rx = 90
+    .translate = @vector(0,$tankWidth-$shellThk,$bottomThk)
+
+    sketch name=skWallHV
+        rect p1=@point(0,0) p2=@point($tankLength,$tankHeight) mode=2p
+    endsketch
+
+    extrude profile=#skWallHV distance=$shellThk mode=add
+endpart
+
+part name=Wall_S1
+    .rx = 90
+    .rz = 90
+    .translate = @vector(0,$shellThk,$bottomThk)
+
+    sketch name=skWallS1
+        rect p1=@point(0,0) p2=@point($tankWidth-2*$shellThk,$tankHeight) mode=2p
+    endsketch
+
+    extrude profile=#skWallS1 distance=$shellThk mode=add
+endpart
+
+part name=Wall_S2
+    .rx = 90
+    .rz = 90
+    .translate = @vector($tankLength-$shellThk,$shellThk,$bottomThk)
+
+    sketch name=skWallS2
+        rect p1=@point(0,0) p2=@point($tankWidth-2*$shellThk,$tankHeight) mode=2p
+    endsketch
+
+    extrude profile=#skWallS2 distance=$shellThk mode=add
+endpart
+
+part name=TopFlange
+    .translate = @vector(-$flangeWidth,-$flangeWidth,$bottomThk+$tankHeight)
+
+    sketch name=skFlangeOuter
+        rect p1=@point(0,0) p2=@point($tankLength+2*$flangeWidth,$tankWidth+2*$flangeWidth) mode=2p
+        rect p1=@point($flangeWidth,$flangeWidth) p2=@point($flangeWidth+$tankLength,$flangeWidth+$tankWidth) mode=2p
+    endsketch
+
+    extrude name=exFlange profile=#skFlangeOuter distance=$flangeThk mode=add
+endpart
+
+part name=Pad1
+    .translate = @vector($hangerInsetX,-$hangerPadWid/2,$bottomThk+$tankHeight+$flangeThk)
+
+    sketch name=skPad1
+        rect p1=@point(0,0) p2=@point($hangerPadLen,$hangerPadWid) mode=2p
+    endsketch
+
+    extrude profile=#skPad1 distance=$hangerPadThk  mode=add
+endpart
+
+part name=Pad2
+    .translate = @vector($tankLength-$hangerInsetX-$hangerPadLen,-$hangerPadWid/2,$bottomThk+$tankHeight+$flangeThk)
+
+    sketch name=skPad2
+        rect p1=@point(0,0) p2=@point($hangerPadLen,$hangerPadWid) mode=2p
+    endsketch
+
+    extrude profile=#skPad2 distance=$hangerPadThk  mode=add
+endpart
+
+part name=Pad3
+    .translate = @vector($hangerInsetX,$tankWidth-$hangerPadWid/2,$bottomThk+$tankHeight+$flangeThk)
+
+    sketch name=skPad3
+        rect p1=@point(0,0) p2=@point($hangerPadLen,$hangerPadWid) mode=2p
+    endsketch
+
+    extrude profile=#skPad3 distance=$hangerPadThk  mode=add
+endpart
+
+part name=Pad4
+    .translate = @vector($tankLength-$hangerInsetX-$hangerPadLen,$tankWidth-$hangerPadWid/2,$bottomThk+$tankHeight+$flangeThk)
+
+    sketch name=skPad4
+        rect p1=@point(0,0) p2=@point($hangerPadLen,$hangerPadWid) mode=2p
+    endsketch
+
+    extrude profile=#skPad4 distance=$hangerPadThk  mode=add
+endpart

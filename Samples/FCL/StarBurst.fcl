@@ -1,0 +1,32 @@
+params layers=15, slice_thk=8
+params radius=200, hole_rad=30
+params total_twist=90
+
+assembly name=MorphingSlicer
+    
+    // newdef=true forces the engine to recalculate parameters for every slice
+    part name=Slice qty=$layers newdef=true
+        
+        // 1. Get a normalized value (0.0 to 1.0) based on the current slice index
+        params t = @Range01($index - 1, $layers)
+        
+        // 2. Stack slices vertically and apply the progressive twist
+        .translate = ((0, 0, ($index - 1) * $slice_thk))
+        .rz = @($t * $total_twist)
+        
+        // 3. THE LESSON: Use @Lerp (Linear Interpolation) to morph parameters!
+        // Bottom (t=0) starts at n=12 (Spiky). Top (t=1) ends at n=0.5 (Smooth).
+        params n_val = @Lerp(12.0, 0.5, $t)
+        
+        sketch name=SliceSk
+            // 80 points per slice provides a smooth curve without lagging the mesher
+            pline closed=true pointlist=@SuperformulaProfile(6, $n_val, $n_val, $n_val, $radius, 80)
+            
+            // Standard boolean cut for the center shaft
+            circle mode=cr centre=(0,0) radius=$hole_rad
+        endsketch
+        
+        extrude profile=#SliceSk distance=$slice_thk mode=add
+    endpart
+
+endassembly

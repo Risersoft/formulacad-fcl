@@ -1,0 +1,28 @@
+// p=3, q=8 creates a beautiful, interwoven Celtic-style knot
+params p=3, q=8
+params maj_r=200, min_r=70
+
+// A sharp 5-pointed star
+params star_pts=5, star_out=25, star_in=10
+
+assembly name=MathematicalArt
+
+    part name=CelticKnot
+        
+        // 1. Generate the 3D interwoven path
+        curve name=KnotPath
+            spline pointlist=@TorusKnot($p, $q, $maj_r, $min_r, 300)
+        endcurve
+        
+        // 2. Snap the sketch perfectly perpendicular to the start of the curve
+        sketch name=StarSk on=@CurvePlane(KnotPath)
+            // Draw the star!
+            pline name=Star closed=true pointlist=@StarProfile($star_pts, $star_out, $star_in)
+        endsketch
+        
+        // 3. Sweep the star along the knot!
+        sweep name=KnotSweep profile=#StarSk path=#KnotPath solid=true
+        
+    endpart
+
+endassembly

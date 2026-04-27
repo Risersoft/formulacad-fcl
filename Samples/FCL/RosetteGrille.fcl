@@ -1,0 +1,184 @@
+// Rosette Grille — a decorative radial grille plate with three concentric
+// bands of perforations, six cruciform ribs, and a raised central boss.
+// The kind of hardware you'd find as a fan guard, air diffuser faceplate,
+// or decorative cover over a fluid manifold. All openings are carved in a
+// single sketch and extruded as one solid, so the whole plate is one
+// watertight body with the tracery as through-holes.
+//
+// Design notes:
+// - The three bands use qty= on sketch primitives for dense composition.
+//   Inner band: 18 small circular perforations grouped as 6 clusters of 3.
+//   Middle band: 12 slot-shaped cutouts arranged tangentially.
+//   Outer band: 72 circular perforations grouped as 18 clusters of 4.
+// - The six cruciform ribs (two overlapping rectangles per rib) extrude
+//   proud of the plate surface as reinforcement features.
+// - The central boss is a raised ring framing a central opening, typical
+//   of grille hardware where a fastener or spindle passes through the
+//   middle.
+
+params outer_rad=600, panel_thk=55
+params oculus_rad=75
+
+// Inner band — 6 trefoil clusters of 3 perforations each (18 total)
+params b1_count=6, b1_r_centre=165
+params b1_cluster_r=38
+params b1_petal_r=30
+
+// Middle band — 12 tangential slots
+params b2_count=12, b2_r_centre=325
+params b2_width=75, b2_height=170
+
+// Outer band — 18 quatrefoil clusters of 4 perforations each (72 total)
+params b3_count=18, b3_r_centre=485
+params b3_cluster_r=32
+params b3_petal_r=22
+
+assembly name=RosetteGrille
+.rx=90
+
+    // 1. MAIN PLATE — all perforations carved in a single sketch, then
+    // extruded as one solid with through-holes.
+    part name=GrillePlate
+
+        sketch name=GrilleSk
+
+            // Outer boundary of the plate
+            circle name=Outer mode=cr centre=(0,0) radius=$outer_rad
+
+            // Central opening (for spindle, fastener, or flow-through)
+            circle name=CentreHole mode=cr centre=(0,0) radius=$oculus_rad
+
+            // INNER BAND — 18 perforations arranged as 6 clusters of 3.
+            // For each perforation, compute which cluster it belongs to
+            // (@floor division) and its position within the cluster (@mod).
+            circle name=InnerBand
+                mode=cr
+                centre=@point(
+                    $b1_r_centre * @CosDeg(@floor(($index - 1) / 3) * 60)
+                    + $b1_cluster_r * @CosDeg(@floor(($index - 1) / 3) * 60
+                                              + @mod($index - 1, 3) * 120 + 90),
+                    $b1_r_centre * @SinDeg(@floor(($index - 1) / 3) * 60)
+                    + $b1_cluster_r * @SinDeg(@floor(($index - 1) / 3) * 60
+                                              + @mod($index - 1, 3) * 120 + 90)
+                )
+                radius=$b1_petal_r
+                qty=@($b1_count * 3)
+
+            // MIDDLE BAND — 12 tangential slots.
+            // Each slot is a 5-point polyline, rotated into position around
+            // the plate centre. The slot is defined locally then each corner
+            // is transformed into world-space for that slot's angular slot.
+            pline name=MiddleBand
+                closed=true
+                pointlist=@list(
+                    @point(
+                        $b2_r_centre * @CosDeg(($index - 1) * 30)
+                        + @CosDeg(($index - 1) * 30 + 90) * @(-$b2_width / 2)
+                        + @CosDeg(($index - 1) * 30) * @(-$b2_height / 2),
+                        $b2_r_centre * @SinDeg(($index - 1) * 30)
+                        + @SinDeg(($index - 1) * 30 + 90) * @(-$b2_width / 2)
+                        + @SinDeg(($index - 1) * 30) * @(-$b2_height / 2)
+                    ),
+                    @point(
+                        $b2_r_centre * @CosDeg(($index - 1) * 30)
+                        + @CosDeg(($index - 1) * 30 + 90) * @($b2_width / 2)
+                        + @CosDeg(($index - 1) * 30) * @(-$b2_height / 2),
+                        $b2_r_centre * @SinDeg(($index - 1) * 30)
+                        + @SinDeg(($index - 1) * 30 + 90) * @($b2_width / 2)
+                        + @SinDeg(($index - 1) * 30) * @(-$b2_height / 2)
+                    ),
+                    @point(
+                        $b2_r_centre * @CosDeg(($index - 1) * 30)
+                        + @CosDeg(($index - 1) * 30 + 90) * @($b2_width / 2)
+                        + @CosDeg(($index - 1) * 30) * @($b2_height / 3),
+                        $b2_r_centre * @SinDeg(($index - 1) * 30)
+                        + @SinDeg(($index - 1) * 30 + 90) * @($b2_width / 2)
+                        + @SinDeg(($index - 1) * 30) * @($b2_height / 3)
+                    ),
+                    @point(
+                        $b2_r_centre * @CosDeg(($index - 1) * 30)
+                        + @CosDeg(($index - 1) * 30) * @($b2_height / 2),
+                        $b2_r_centre * @SinDeg(($index - 1) * 30)
+                        + @SinDeg(($index - 1) * 30) * @($b2_height / 2)
+                    ),
+                    @point(
+                        $b2_r_centre * @CosDeg(($index - 1) * 30)
+                        + @CosDeg(($index - 1) * 30 + 90) * @(-$b2_width / 2)
+                        + @CosDeg(($index - 1) * 30) * @($b2_height / 3),
+                        $b2_r_centre * @SinDeg(($index - 1) * 30)
+                        + @SinDeg(($index - 1) * 30 + 90) * @(-$b2_width / 2)
+                        + @SinDeg(($index - 1) * 30) * @($b2_height / 3)
+                    )
+                )
+                qty=$b2_count
+
+            // OUTER BAND — 72 perforations arranged as 18 clusters of 4.
+            // Same clustering pattern as the inner band but with 4 petals
+            // per cluster instead of 3 (arranged at 0, 90, 180, 270).
+            circle name=OuterBand
+                mode=cr
+                centre=@point(
+                    $b3_r_centre * @CosDeg(@floor(($index - 1) / 4) * 20)
+                    + $b3_cluster_r * @CosDeg(@floor(($index - 1) / 4) * 20
+                                              + @mod($index - 1, 4) * 90),
+                    $b3_r_centre * @SinDeg(@floor(($index - 1) / 4) * 20)
+                    + $b3_cluster_r * @SinDeg(@floor(($index - 1) / 4) * 20
+                                              + @mod($index - 1, 4) * 90)
+                )
+                radius=$b3_petal_r
+                qty=@($b3_count * 4)
+
+        endsketch
+
+        extrude profile=#GrilleSk distance=$panel_thk mode=add
+    endpart
+
+    // 2. CRUCIFORM RIBS — six radial reinforcement ribs with cross-shaped
+    // cross-section (two overlapping rectangles per rib), standing proud
+    // of the plate surface. These divide the plate into sextants and add
+    // rigidity to the perforated geometry.
+    assembly name=Ribs qty=6
+        .rz = @(($index - 1) * 60)
+
+        part name=Rib
+            .translate = @vector($oculus_rad, 0, 0)
+
+            sketch name=RibSk
+                // Horizontal bar of the cross (wider, shallower)
+                rect mode=plw point1=@point(0, -22) length=@($outer_rad - $oculus_rad) width=44
+                // Vertical ridge of the cross (narrower, sits on top)
+                rect mode=plw point1=@point(0, -10) length=@($outer_rad - $oculus_rad) width=20
+            endsketch
+
+            extrude profile=#RibSk distance=@($panel_thk + 35) mode=add
+        endpart
+    endassembly
+
+    // 3. OUTER RING — a chunky stone-like ring bounding the plate, giving
+    // the whole piece a clear edge and a solid mounting surface.
+    part name=OuterRing
+        .translate = @vector(0, 0, -10)
+
+        sketch name=RingSk
+            circle name=RingOuter mode=cr centre=(0,0) radius=@($outer_rad + 70)
+            circle name=RingInner mode=cr centre=(0,0) radius=$outer_rad
+        endsketch
+
+        extrude profile=#RingSk distance=@($panel_thk + 55) mode=add
+    endpart
+
+    // 4. CENTRAL BOSS — a raised ring around the central opening, typical
+    // of grille hardware where a fastener or spindle passes through and
+    // the boss provides extra material for the seating surface.
+    part name=CentralBoss
+        .translate = @vector(0, 0, $panel_thk)
+
+        sketch name=BossSk
+            circle name=BossOuter mode=cr centre=(0,0) radius=@($oculus_rad + 35)
+            circle name=BossInner mode=cr centre=(0,0) radius=$oculus_rad
+        endsketch
+
+        extrude profile=#BossSk distance=25 mode=add
+    endpart
+
+endassembly

@@ -1,0 +1,19 @@
+part
+curve name=c0
+    circle c=(0,0,0) r=20 normal=((0,0,1)) mode=cr
+endcurve
+
+curve name=c1
+    circle c=(20,10,40) r=16 normal=((0.2,0,1)) mode=cr
+endcurve
+
+curve name=c2
+    circle c=(-12,22,80) r=10 normal=((0.4,0.2,1)) mode=cr
+endcurve
+
+curve name=c3
+    circle c=(8,-6,120) r=6 normal=((0.1,0.5,1)) mode=cr
+endcurve
+
+loft name=Body sections=[#c0,#c1,#c2,#c3] solid=true
+endpart

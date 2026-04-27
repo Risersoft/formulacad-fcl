@@ -1,0 +1,23 @@
+params depth=3, scale=500
+params base_size=@($scale / @POWER(2, $depth))
+
+assembly name=FractalArt
+    params pts = @SierpinskiPoints($depth, $scale)
+    
+    // Generate the translation grid for the fractal level
+    assembly name=FractalUnit qty=@elemcount($pts)
+        
+        // Dynamic evaluation bypasses the static param cache!
+        .translate = ((@px(@nth($pts, $index)), @py(@nth($pts, $index)), @pz(@nth($pts, $index))))
+
+        part name=TetraCell
+            sketch name=BaseSk
+                pline name=Shape closed=true pointlist=@SuperformulaProfile(3, 10, 10, 10, $base_size, 30)
+            endsketch
+            
+            // Extrude the base shape
+            extrude profile=#BaseSk distance=@($base_size * 0.8) mode=add
+        endpart
+    endassembly
+
+endassembly
