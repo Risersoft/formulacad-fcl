@@ -1,0 +1,16 @@
+// path: /library/is/steel/msrhs/MSRHS.fcl
+// standard: IS
+// family: MSRHS
+// units: mm
+
+params span=1000
+params h=100, b=50, t=2.5
+params ro=@(1.5 * $t)
+params ri=@($ro - $t)
+
+sketch name=sec
+    rect p1=(-$b/2, -$h/2) p2=($b/2, $h/2) mode=2p filletradius=$ro
+    rect p1=(-$b/2+$t, -$h/2+$t) p2=($b/2-$t, $h/2-$t) mode=2p filletradius=$ri
+endsketch
+
+extrude profile=#sec distance=$span mode=add

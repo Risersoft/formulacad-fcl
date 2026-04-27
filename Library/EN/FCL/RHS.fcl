@@ -1,0 +1,18 @@
+// path: /library/en/steel/rhs/RHS.fcl
+// standard: EN
+// family: RHS
+// units: mm
+// note: EN 10210-2 (hot-finished) and EN 10219-2 (cold-formed) rectangular hollow sections.
+// note: outer corner radius 2*t and inner corner radius t per EN 10210.
+
+params span=1000
+params h=100, b=50, t=5
+params ro=@(2 * $t)
+params ri=$t
+
+sketch name=sec
+    rect p1=(-$b/2, -$h/2) p2=($b/2, $h/2) mode=2p filletradius=$ro
+    rect p1=(-$b/2+$t, -$h/2+$t) p2=($b/2-$t, $h/2-$t) mode=2p filletradius=$ri
+endsketch
+
+extrude profile=#sec distance=$span mode=add

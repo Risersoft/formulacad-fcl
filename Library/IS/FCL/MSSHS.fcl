@@ -1,0 +1,16 @@
+// path: /library/is/steel/msshs/MSSHS.fcl
+// standard: IS
+// family: MSSHS
+// units: mm
+
+params span=1000
+params a=50, t=2.5
+params ro=@(1.5 * $t)
+params ri=@($ro - $t)
+
+sketch name=sec
+    rect p1=(-$a/2, -$a/2) p2=($a/2, $a/2) mode=2p filletradius=$ro
+    rect p1=(-$a/2+$t, -$a/2+$t) p2=($a/2-$t, $a/2-$t) mode=2p filletradius=$ri
+endsketch
+
+extrude profile=#sec distance=$span mode=add

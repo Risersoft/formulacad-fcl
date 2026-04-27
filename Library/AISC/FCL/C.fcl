@@ -1,0 +1,38 @@
+// path: /library/aisc/steel/c/C.fcl
+// standard: AISC
+// family: C
+// units: mm
+// note: channel with x=0 at centroid and y=0 at section bottom.
+// note: root fillet radius is derived from kdes as r = kdes - tf.
+// note: x-centroid is approximated from the parallel-flange rectangle model.
+
+params span=1000
+params d=381, bf=94.5, tw=18.2, tf=16.5, kdes=36.6
+params r=@Max(0, $kdes - $tf)
+params areaWeb=@($tw * ($d - 2*$tf))
+params areaFlange=@($bf * $tf)
+params xcg=@(( $areaWeb*($tw/2) + 2*$areaFlange*($bf/2) ) / ( $areaWeb + 2*$areaFlange ))
+params xL=@(-$xcg)
+params xR=@($bf - $xcg)
+params xw=@($xL + $tw)
+params bulge=@TanDeg(22.5)
+
+sketch name=sec
+    pline name=outer
+        pointlist=[
+            ($xL,$d),
+            ($xR,$d),
+            ($xR,$d-$tf),
+            ($xw+$r,$d-$tf),
+            ($xw,$d-$tf-$r),
+            ($xw,$tf+$r),
+            ($xw+$r,$tf),
+            ($xR,$tf),
+            ($xR,0),
+            ($xL,0)
+        ]
+        bulgelist=[0,0,0,$bulge,0,$bulge,0,0,0,0]
+        closed=true
+endsketch
+
+extrude profile=#sec distance=$span mode=add

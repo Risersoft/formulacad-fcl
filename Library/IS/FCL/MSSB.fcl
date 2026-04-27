@@ -1,0 +1,11 @@
+// M.S. Square Bar
+// Catalog-driven section. Caller should pass only span.
+// Section parameter d is supplied by index.json.
+
+params d=20, span=1000
+
+sketch name=sec
+    rect p1=(-$d/2,-$d/2) p2=($d/2,$d/2) mode=2p
+endsketch
+
+extrude profile=#sec distance=$span mode=add

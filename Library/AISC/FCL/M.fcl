@@ -1,0 +1,36 @@
+// path: /library/aisc/steel/w/W.fcl
+// standard: AISC
+// family: W
+// units: mm
+// note: parallel flange I-shape using kdes to derive root fillet radius.
+
+params span=1000
+params d=310, bf=165, tw=6.6, tf=10.2, kdes=19
+params r=@Max(0, $kdes - $tf)
+params bulge=@TanDeg(22.5)
+
+sketch name=sec
+    pline name=outer
+        pointlist=[
+            (-$bf/2,$d),
+            ($bf/2,$d),
+            ($bf/2,$d-$tf),
+            ($tw/2+$r,$d-$tf),
+            ($tw/2,$d-$tf-$r),
+            ($tw/2,$tf+$r),
+            ($tw/2+$r,$tf),
+            ($bf/2,$tf),
+            ($bf/2,0),
+            (-$bf/2,0),
+            (-$bf/2,$tf),
+            (-$tw/2-$r,$tf),
+            (-$tw/2,$tf+$r),
+            (-$tw/2,$d-$tf-$r),
+            (-$tw/2-$r,$d-$tf),
+            (-$bf/2,$d-$tf)
+        ]
+        bulgelist=[0,0,0,$bulge,0,$bulge,0,0,0,0,0,$bulge,0,$bulge,0,0]
+        closed=true
+endsketch
+
+extrude profile=#sec distance=$span add=true

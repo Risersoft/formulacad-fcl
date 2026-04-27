@@ -1,0 +1,31 @@
+// path: /library/en/steel/upe/UPE.fcl
+// standard: EN
+// family: UPE
+// units: mm
+// note: UPE parallel-flange channels per EN 10365.
+// note: 10-point pline with root fillets at the two web-flange junctions.
+
+params span=1000
+params h=200, b=80, tw=6.0, tf=11.0, r=13
+params bulge90=0.414213562373095
+params xw=@(-$b/2 + $tw)
+
+sketch name=sec
+    pline name=outer
+        pointlist=[
+            (-$b/2,$h),
+            ($b/2,$h),
+            ($b/2,$h-$tf),
+            ($xw+$r,$h-$tf),
+            ($xw,$h-$tf-$r),
+            ($xw,$tf+$r),
+            ($xw+$r,$tf),
+            ($b/2,$tf),
+            ($b/2,0),
+            (-$b/2,0)
+        ]
+        bulgelist=[0,0,0,$bulge90,0,$bulge90,0,0,0,0]
+        closed=true
+endsketch
+
+extrude profile=#sec distance=$span mode=add

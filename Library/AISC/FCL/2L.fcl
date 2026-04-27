@@ -1,0 +1,43 @@
+// path: /library/aisc/steel/2l/2L.fcl
+// standard: AISC
+// family: 2L
+// units: mm
+// note: modeled as double angles placed back-to-back.
+// note: x=0 at composite centroid, y=0 at flat side.
+
+params span=1000
+params d=100, b=75, t=8, gap=0
+
+params x1=@(-$gap/2 - $b)
+params x2=@(-$gap/2)
+params x3=@($gap/2)
+params x4=@($gap/2 + $b)
+
+sketch name=leftSec
+    pline name=p1
+        pointlist=[
+            ($x1,0),
+            ($x2,0),
+            ($x2,$d),
+            ($x2-$t,$d),
+            ($x2-$t,$t),
+            ($x1,$t)
+        ]
+        closed=true
+endsketch
+
+sketch name=rightSec
+    pline name=p1
+        pointlist=[
+            ($x3,0),
+            ($x4,0),
+            ($x4,$t),
+            ($x3+$t,$t),
+            ($x3+$t,$d),
+            ($x3,$d)
+        ]
+        closed=true
+endsketch
+
+extrude profile=#leftSec distance=$span mode=add
+extrude profile=#rightSec distance=$span mode=add

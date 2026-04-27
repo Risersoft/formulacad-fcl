@@ -1,0 +1,22 @@
+// path: /library/is/steel/msea/MSEA.fcl
+// standard: IS
+// family: MSEA
+// units: mm
+
+params span=1000
+params a=50, t=5
+
+sketch name=sec
+    pline name=outer
+        pointlist=[
+            (-$a/2,$a),
+            ($a/2,$a),
+            ($a/2,$a-$t),
+            (-$a/2+$t,$a-$t),
+            (-$a/2+$t,0),
+            (-$a/2,0)
+        ]
+        closed=true
+endsketch
+
+extrude profile=#sec distance=$span mode=add

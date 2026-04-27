@@ -1,0 +1,25 @@
+// path: /library/is/steel/mstee/MSTEE.fcl
+// standard: IS
+// family: MSTEE
+// units: mm
+
+params span=1000
+params h=100, b=100, tw=10
+params tf=@($tw)
+
+sketch name=sec
+    pline name=outer
+        pointlist=[
+            (-$b/2,$h),
+            ($b/2,$h),
+            ($b/2,$h-$tf),
+            ($tw/2,$h-$tf),
+            ($tw/2,0),
+            (-$tw/2,0),
+            (-$tw/2,$h-$tf),
+            (-$b/2,$h-$tf)
+        ]
+        closed=true
+endsketch
+
+extrude profile=#sec distance=$span mode=add

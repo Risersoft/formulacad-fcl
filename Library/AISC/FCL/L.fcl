@@ -1,0 +1,36 @@
+// path: /library/aisc/steel/l/L.fcl
+// standard: AISC
+// family: L
+// units: mm
+// note: single angle with x=0 at centroid and y=0 at flat side.
+// note: d = horizontal leg (lies on y=0)
+// note: b = vertical leg (default orientation places it on left, x<0)
+// note: user controls orientation via parameters / transforms (no auto swapping)
+
+params span=1000
+params d=100, b=75, t=8
+
+params area1=@($b * $t)
+params area2=@($t * $d)
+params area3=@($t * $t)
+params area=@($area1 + $area2 - $area3)
+
+params xcg=@(( $area1*($d/2) + $area2*($t/2) - $area3*($t/2) ) / $area)
+
+params xL=@(-$xcg)
+params xR=@($d - $xcg)
+
+sketch name=sec
+    pline name=outer
+        pointlist=[
+            ($xL,0),
+            ($xR,0),
+            ($xR,$t),
+            ($xL+$t,$t),
+            ($xL+$t,$b),
+            ($xL,$b)
+        ]
+        closed=true
+endsketch
+
+extrude profile=#sec distance=$span mode=add

@@ -1,0 +1,16 @@
+// path: /library/aisc/steel/hss_sqr/HSS_SQR.fcl
+// standard: AISC
+// family: HSS_SQR
+// units: mm
+
+params span=1000
+params Ht=100, B=100, tdes=5
+params ro=@(1.5 * $tdes)
+params ri=@Max(0, $ro - $tdes)
+
+sketch name=sec
+    rect p1=(-$B/2, -$Ht/2) p2=($B/2, $Ht/2) mode=2p filletradius=$ro
+    rect p1=(-$B/2+$tdes, -$Ht/2+$tdes) p2=($B/2-$tdes, $Ht/2-$tdes) mode=2p filletradius=$ri
+endsketch
+
+extrude profile=#sec distance=$span mode=add

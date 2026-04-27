@@ -1,0 +1,40 @@
+// path: /library/en/steel/upn/UPN.fcl
+// standard: EN
+// family: UPN
+// units: mm
+// note: UPN tapered-flange channels per DIN 1026-1 / EN 10279.
+// note: inner flange surfaces slope 8% (delta ~ 4.57 deg, so alpha ~ 94.57 deg).
+// note: uses alpha and r1 to model sloped flange faces with root fillets.
+// note: r2 is retained as a parameter for catalog completeness but is not explicitly modeled.
+
+params span=1000
+params h=200, b=75, tw=8.5, tf=11.5, r1=11.5, r2=6.0, alpha=94.57
+params delta=@($alpha - 90)
+params x1=@($b - $tw)
+params slope=@($x1 * @TanDeg($delta))
+params filletAngle=@(180 - $alpha)
+params bulgeRoot=@TanDeg($filletAngle/4)
+params offset=@($r1 * @TanDeg($filletAngle/2))
+params c=@CosDeg($delta)
+params s=@SinDeg($delta)
+params xw=@(-$b/2 + $tw)
+
+sketch name=sec
+    pline name=outer
+        pointlist=[
+            (-$b/2,$h),
+            ($b/2,$h),
+            ($b/2,$h-$tf+$slope),
+            ($xw+$offset*$c,$h-$tf+$offset*$s),
+            ($xw,$h-$tf-$offset),
+            ($xw,$tf+$offset),
+            ($xw+$offset*$c,$tf-$offset*$s),
+            ($b/2,$tf-$slope),
+            ($b/2,0),
+            (-$b/2,0)
+        ]
+        bulgelist=[0,0,0,$bulgeRoot,0,$bulgeRoot,0,0,0,0]
+        closed=true
+endsketch
+
+extrude profile=#sec distance=$span mode=add

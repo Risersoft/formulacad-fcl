@@ -1,0 +1,25 @@
+// path: /library/en/steel/ua/UA.fcl
+// standard: EN
+// family: UA
+// units: mm
+// note: EN 10056-1 unequal angles.
+// note: a is the horizontal (longer) leg and b is the vertical (shorter) leg.
+// note: r1 and r2 are retained in the catalog for completeness but are not explicitly modeled.
+
+params span=1000
+params a=75, b=50, t=5
+
+sketch name=sec
+    pline name=outer
+        pointlist=[
+            (-$a/2,$b),
+            ($a/2,$b),
+            ($a/2,$b-$t),
+            (-$a/2+$t,$b-$t),
+            (-$a/2+$t,0),
+            (-$a/2,0)
+        ]
+        closed=true
+endsketch
+
+extrude profile=#sec distance=$span mode=add

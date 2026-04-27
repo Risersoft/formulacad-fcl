@@ -1,0 +1,15 @@
+// path: /library/is/steel/mspipe/MSPIPE.fcl
+// standard: IS
+// family: MSPIPE
+// units: mm
+
+params span=1000
+params od=60.3, t=3.6
+params id=@($od - 2*$t)
+
+sketch name=sec
+    circle name=outer c=(0,0) r=@($od/2) mode=cr
+    circle name=inner c=(0,0) r=@($id/2) mode=cr
+endsketch
+
+extrude profile=#sec distance=$span mode=add

@@ -1,0 +1,36 @@
+// path: /library/en/steel/heb/HEB.fcl
+// standard: EN
+// family: HEB
+// units: mm
+// note: HEB parallel-flange wide beams (medium series) per EN 10365.
+// note: same cross-section topology as IPE; root fillet r is modelled via 90-degree arcs.
+
+params span=1000
+params h=200, b=200, tw=9.0, tf=15.0, r=18
+params bulge90=0.414213562373095
+
+sketch name=sec
+    pline name=outer
+        pointlist=[
+            (-$b/2,$h),
+            ($b/2,$h),
+            ($b/2,$h-$tf),
+            ($tw/2+$r,$h-$tf),
+            ($tw/2,$h-$tf-$r),
+            ($tw/2,$tf+$r),
+            ($tw/2+$r,$tf),
+            ($b/2,$tf),
+            ($b/2,0),
+            (-$b/2,0),
+            (-$b/2,$tf),
+            (-$tw/2-$r,$tf),
+            (-$tw/2,$tf+$r),
+            (-$tw/2,$h-$tf-$r),
+            (-$tw/2-$r,$h-$tf),
+            (-$b/2,$h-$tf)
+        ]
+        bulgelist=[0,0,0,$bulge90,0,$bulge90,0,0,0,0,0,$bulge90,0,$bulge90,0,0]
+        closed=true
+endsketch
+
+extrude profile=#sec distance=$span mode=add

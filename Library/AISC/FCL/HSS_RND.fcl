@@ -1,0 +1,15 @@
+// path: /library/aisc/steel/hss_rnd/HSS_RND.fcl
+// standard: AISC
+// family: HSS_RND
+// units: mm
+
+params span=1000
+params OD=168.3, tdes=6.4
+params id=@($OD - 2*$tdes)
+
+sketch name=sec
+    circle name=outer c=(0,0) r=@($OD/2) mode=cr
+    circle name=inner c=(0,0) r=@($id/2) mode=cr
+endsketch
+
+extrude profile=#sec distance=$span mode=add

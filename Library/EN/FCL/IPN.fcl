@@ -1,0 +1,45 @@
+// path: /library/en/steel/ipn/IPN.fcl
+// standard: EN
+// family: IPN
+// units: mm
+// note: IPN tapered-flange I beams per EN 10365 / DIN 1025-1.
+// note: inner flange surfaces slope 14% (delta ~ 7.97 deg, so alpha ~ 97.97 deg).
+// note: uses alpha and r1 to model sloped flange faces with root fillets.
+// note: r2 is retained as a parameter for catalog completeness but is not explicitly modeled.
+
+params span=1000
+params h=200, b=90, tw=7.5, tf=11.3, r1=7.5, r2=4.5, alpha=97.97
+params delta=@($alpha - 90)
+params x1=@(($b - $tw)/2)
+params slope=@($x1 * @TanDeg($delta))
+params filletAngle=@(180 - $alpha)
+params bulgeRoot=@TanDeg($filletAngle/4)
+params offset=@($r1 * @TanDeg($filletAngle/2))
+params c=@CosDeg($delta)
+params s=@SinDeg($delta)
+
+sketch name=sec
+    pline name=outer
+        pointlist=[
+            (-$b/2,$h),
+            ($b/2,$h),
+            ($b/2,$h-$tf+$slope),
+            ($tw/2+$offset*$c,$h-$tf+$offset*$s),
+            ($tw/2,$h-$tf-$offset),
+            ($tw/2,$tf+$offset),
+            ($tw/2+$offset*$c,$tf-$offset*$s),
+            ($b/2,$tf-$slope),
+            ($b/2,0),
+            (-$b/2,0),
+            (-$b/2,$tf-$slope),
+            (-$tw/2-$offset*$c,$tf-$offset*$s),
+            (-$tw/2,$tf+$offset),
+            (-$tw/2,$h-$tf-$offset),
+            (-$tw/2-$offset*$c,$h-$tf+$offset*$s),
+            (-$b/2,$h-$tf+$slope)
+        ]
+        bulgelist=[0,0,0,$bulgeRoot,0,$bulgeRoot,0,0,0,0,0,$bulgeRoot,0,$bulgeRoot,0,0]
+        closed=true
+endsketch
+
+extrude profile=#sec distance=$span mode=add

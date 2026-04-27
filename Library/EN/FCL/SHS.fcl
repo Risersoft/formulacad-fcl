@@ -1,0 +1,18 @@
+// path: /library/en/steel/shs/SHS.fcl
+// standard: EN
+// family: SHS
+// units: mm
+// note: EN 10210-2 (hot-finished) and EN 10219-2 (cold-formed) square hollow sections.
+// note: outer corner radius 2*t and inner corner radius t per EN 10210.
+
+params span=1000
+params a=100, t=5
+params ro=@(2 * $t)
+params ri=$t
+
+sketch name=sec
+    rect p1=(-$a/2, -$a/2) p2=($a/2, $a/2) mode=2p filletradius=$ro
+    rect p1=(-$a/2+$t, -$a/2+$t) p2=($a/2-$t, $a/2-$t) mode=2p filletradius=$ri
+endsketch
+
+extrude profile=#sec distance=$span mode=add

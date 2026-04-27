@@ -1,0 +1,13 @@
+// path: /library/is/steel/msrb/MSRB.fcl
+// standard: IS
+// family: MSRB
+// units: mm
+
+params span=1000
+params d=20
+
+sketch name=sec
+    circle c=(0,0) r=@($d/2) mode=cr
+endsketch
+
+extrude profile=#sec distance=$span mode=add

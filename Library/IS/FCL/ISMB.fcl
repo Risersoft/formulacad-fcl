@@ -1,0 +1,43 @@
+// path: /library/is/steel/ismb/ISMB.fcl
+// standard: IS
+// family: ISMB
+// units: mm
+// note: uses alpha and r1 to model sloped inner flange faces with root fillets.
+// note: r2 is retained as a parameter for catalog completeness but is not explicitly modeled.
+
+params span=1000
+params h=200, b=100, tw=5.7, tf=10.0, r1=11.0, r2=5.0, alpha=98
+params delta=@($alpha - 90)
+params x1=@(($b - $tw)/2)
+params slope=@($x1 * @TanDeg($delta))
+params filletAngle=@(180 - $alpha)
+params bulgeRoot=@TanDeg($filletAngle/4)
+params offset=@($r1 * @TanDeg($filletAngle/2))
+params c=@CosDeg($delta)
+params s=@SinDeg($delta)
+
+sketch name=sec
+    pline name=outer
+        pointlist=[
+            (-$b/2,$h),
+            ($b/2,$h),
+            ($b/2,$h-$tf+$slope),
+            ($tw/2+$offset*$c,$h-$tf+$offset*$s),
+            ($tw/2,$h-$tf-$offset),
+            ($tw/2,$tf+$offset),
+            ($tw/2+$offset*$c,$tf-$offset*$s),
+            ($b/2,$tf-$slope),
+            ($b/2,0),
+            (-$b/2,0),
+            (-$b/2,$tf-$slope),
+            (-$tw/2-$offset*$c,$tf-$offset*$s),
+            (-$tw/2,$tf+$offset),
+            (-$tw/2,$h-$tf-$offset),
+            (-$tw/2-$offset*$c,$h-$tf+$offset*$s),
+            (-$b/2,$h-$tf+$slope)
+        ]
+        bulgelist=[0,0,0,$bulgeRoot,0,$bulgeRoot,0,0,0,0,0,$bulgeRoot,0,$bulgeRoot,0,0]
+        closed=true
+endsketch
+
+extrude profile=#sec distance=$span mode=add
