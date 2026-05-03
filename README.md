@@ -4,8 +4,6 @@ Open reference materials for **FCL — the FormulaCAD Language**, a text-first a
 
 This repository contains the FCL specification, sample models, and the standard component library used by FormulaCAD.
 
-Models defined here are executed and rendered by the FormulaCAD platform. The platform itself is not part of this repository.
-
 ---
 
 ## What's in here
@@ -136,7 +134,7 @@ child name=Post   key="AISC.W12X26" span=3000
 
 This repository is open source under the MIT License.
 
-The FormulaCAD platform is not part of this repository.
+Models defined here are executed and rendered by the FormulaCAD platform. The platform itself is not part of this repository.
 
 ---
 
